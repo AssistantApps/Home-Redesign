@@ -1,0 +1,8 @@
+$appTitles: {{#each assistantApps}}{{#unless @last}}"{{{game}}}",{{/unless}}{{/each}}
+$appImages: {{#each assistantApps}}{{#unless @last}}"{{{icon}}}",{{/unless}}{{/each}}
+$defaultAppImage: "{{assistantApps.0.icon}}"
+
+$appAnimationPerc: (100 / length($appTitles))
+$appAnimationGapPerc: 5
+$appAnimationSecPerApp: 2.5
+$appAnimationDuration: ($appAnimationSecPerApp * length($appTitles))

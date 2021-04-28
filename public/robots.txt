@@ -1,6 +1,0 @@
-Sitemap: https://kurtlourens.com/sitemap.xml
-User-agent: *
-Disallow: /cgi-bin/
-Disallow: /docs/
-Disallow: https://khaoznet.visualstudio.com/KhaozNet/_apis/build/status/KhaozNet.CV.v2%20-%20CI
-Disallow: https://khaoznet.vsrm.visualstudio.com/_apis/public/Release/badge/b5441643-fd7c-4330-92d7-bffc23a7e0a4/15/20

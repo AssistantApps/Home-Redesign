@@ -1,0 +1,10 @@
+<article>
+    <a href="{{urlref link}}" class="image" title="{{title}}" target="_blank" rel="noopener noreferrer">
+        <img src="{{image}}" alt="{{title}}" />
+    </a>
+    <h3 class="major">{{title}}</h3>
+    <p>{{description}}</p>
+    {{#each subLinks}}
+    <a href="{{urlref url}}" class="special" title="{{title}}" target="_blank" rel="noopener noreferrer">{{title}}</a>
+    {{/each}}
+</article>

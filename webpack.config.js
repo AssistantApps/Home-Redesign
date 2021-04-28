@@ -3,33 +3,24 @@ const HandlebarsPlugin = require("handlebars-webpack-plugin");
 const moveFile = require('move-file');
 
 const bundleFileName = 'bundle';
-const dirName = 'public';
+const dirName = 'dist';
 const distPath = path.resolve(__dirname, dirName);
 
-const jsDirName = 'public/assets/js';
-const jsDistPath = path.resolve(__dirname, jsDirName);
-
 const packageVersion = require('./package.json').version || '1.0.0';
-
-const moveNonHtmlHandlebarGeneratedFile = (filename, handlebarFilename) => {
-    if (handlebarFilename.includes(`${filename}.html`)) {
-        moveFile(`${distPath}/${filename}.html`, `${distPath}/${filename}`)
-            .then(() => console.log(`The ${filename} file has been renamed`))
-            .catch(() => console.error(`The ${filename} was file has been renamed`));
-    }
-}
 
 module.exports = (env, argv) => {
     return {
         mode: argv.mode === "production" ? "production" : "development",
         entry: [
-            './webpack/lib/main.js',
-            './webpack/lib/custom.js',
+            './webpack/js/main.js',
+            './webpack/js/util.js',
+            './webpack/js/browser.min.js',
+            './webpack/js/custom.js',
         ],
         output: {
             filename: bundleFileName + '.js',
-            path: jsDistPath,
-            library: 'KurtLourens',
+            path: distPath,
+            library: 'AssistantApps',
             // libraryTarget: 'window'
         },
         plugins: [
@@ -38,7 +29,7 @@ module.exports = (env, argv) => {
                 entry: path.join(process.cwd(), "webpack", "handlebar", "*.hbs"),
                 // output path and filename(s). This should lie within the webpacks output-folder
                 // if ommited, the input filepath stripped of its extension will be used
-                output: path.join(distPath, "[name].html"),
+                output: path.join(process.cwd(), "[name].html"),
                 // you can also add a [path] variable, which will emit the files with their relative path, like
                 // output: path.join(process.cwd(), "build", [path], "[name].html"),
 
@@ -71,10 +62,18 @@ module.exports = (env, argv) => {
                 onBeforeRender: function (Handlebars, data, filename) { },
                 onBeforeSave: function (Handlebars, resultHtml, filename) { },
                 onDone: function (Handlebars, filename) {
-                    moveNonHtmlHandlebarGeneratedFile('web.config', filename);
-                    moveNonHtmlHandlebarGeneratedFile('sitemap.xml', filename);
-                    moveNonHtmlHandlebarGeneratedFile('opensearch.xml', filename);
-                    moveNonHtmlHandlebarGeneratedFile('humans.txt', filename);
+                    if (filename.includes('web.config.html')) {
+                        (async () => {
+                            await moveFile('web.config.html', 'web.config');
+                            console.log('The web.config file has been renamed');
+                        })();
+                    }
+                    if (filename.includes('_slider-generated.sass')) {
+                        (async () => {
+                            await moveFile('_slider-generated.sass.html', 'webpack/scss/custom/_slider-generated.sass');
+                            console.log('The _slider-generated.sass file has been renamed');
+                        })();
+                    }
                 }
             }),
         ],

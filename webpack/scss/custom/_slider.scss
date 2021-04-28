@@ -1,0 +1,93 @@
+@import './_slider-generated.sass';
+
+.apps-word-slider {
+    &::after {
+        content: "everything!";
+        animation: appsWordSliderText #{$appAnimationDuration}s infinite;
+        overflow: hidden;
+    }
+}
+
+#banner>.inner .apps-word-slider {
+    @include breakpoint('<medium') {
+        display: block;
+    }
+}
+
+@keyframes appsWordSliderText {
+    @for $titleIndex from 1 through length($appTitles) {
+        $percentageLower: (($titleIndex - 1) * $appAnimationPerc)+1;
+        $percentage: ($titleIndex * $appAnimationPerc);
+
+        @if $titleIndex==1 {
+            $percentageLower: 0;
+        }
+
+        $title: nth($appTitles, $titleIndex);
+
+        #{$percentageLower}#{"%"} {
+            opacity: 0;
+            content: $title;
+        }
+
+        #{$percentageLower + $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            content: $title;
+        }
+
+        #{$percentage - $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            content: $title;
+        }
+
+        #{$percentage}#{"%"} {
+            opacity: 0;
+            content: $title;
+        }
+    }
+}
+
+.apps-image-slider {
+    width: 50px;
+    height: 50px;
+    background-image: url($defaultAppImage);
+    background-repeat: round;
+    animation: appsImageSliderText #{$appAnimationDuration}s infinite;
+
+    @include breakpoint('<medium') {
+        margin: 0 auto;
+    }
+}
+
+@keyframes appsImageSliderText {
+    @for $imageIndex from 1 through length($appImages) {
+        $percentageLower: (($imageIndex - 1) * $appAnimationPerc) + 1;
+        $percentage: ($imageIndex * $appAnimationPerc);
+
+        @if $imageIndex==1 {
+            $percentageLower: 0;
+        }
+
+        $image: nth($appImages, $imageIndex);
+
+        #{$percentageLower}#{"%"} {
+            opacity: 0;
+            background-image: url($image);
+        }
+
+        #{$percentageLower + $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            background-image: url($image);
+        }
+
+        #{$percentage - $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            background-image: url($image);
+        }
+
+        #{$percentage}#{"%"} {
+            opacity: 0;
+            background-image: url($image);
+        }
+    }
+}

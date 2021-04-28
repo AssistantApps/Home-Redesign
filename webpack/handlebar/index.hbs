@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="eng">
 
 <head>
     <meta charset="utf-8" />
-    <title>Kurt Lourens: Software Engineer - Red Ruby IT Co-Owner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="application-name" content="{{meta.appName}}">
     <title>{{meta.title}}</title>
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{images.favicon.x16}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{images.favicon.x32}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{images.favicon.x96}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{images.favicon.x192}}">
+
     <link rel="index" href="{{rootUrl}}">
     <link rel="canonical" href="{{rootUrl}}">
     <meta name="referrer" content="no-referrer">
@@ -15,7 +18,7 @@
     <link rel="author" href="humans.txt">
     <link rel="me" href="{{kurt.email}}">
     <link rel="me" href="{{kurt.website}}" type="text/html">
-    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <link rel="search" href="open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
 
     <meta name="theme-color" content="{{theme.colour}}">
     <meta name="subject" content="{{meta.description}}">
@@ -29,18 +32,20 @@
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Apple -->
-    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="{{images.apple.x76}}">
-    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="{{images.apple.x120}}">
-    <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="{{images.apple.x128}}">
-    <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="{{images.apple.x152}}">
-    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="{{images.apple.x192}}">
-    <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="{{images.apple.x256}}">
-    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="{{images.apple.x512}}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{images.apple.x57}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{images.apple.x60}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{images.apple.x72}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{images.apple.x76}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{images.apple.x114}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{images.apple.x120}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{images.apple.x144}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{images.apple.x152}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{images.apple.x180}}">
     <link rel="mask-icon" href="{{images.maskIcon}}" color="{{theme.maskColour}}">
     <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
     <meta name="apple-mobile-web-app-title" content="{{meta.appName}}">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="{{theme.appleStatusBar}}">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="{{twitter.metaImageSize}}">
@@ -68,364 +73,216 @@
     <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
-    <meta name="msapplication-starturl" content="/?pwa-app" />
 
-    {{#each preconnectLinks}}
-    <link rel="preconnect" href="{{this}}">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    {{#each assistantApps}}
+    <link rel="preload" href="{{icon}}" as="image">
     {{/each}}
-
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/icon-pack.css" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic&display=swap" rel="stylesheet">
 
     {{!-- JSON-LD --}}
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
-            "@type": "Person",
-            "name": "{{kurt.name}}",
-            "givenName": "{{kurt.name}}",
-            "familyName": "{{kurt.name}}",
-            "additionalName": "{{kurt.additionalName}}",
+            "@type": "SoftwareApplication",
+            "name": "{{meta.appName}}",
             "url": "{{rootUrl}}",
-            "image": "{{kurt.image}}",
+            "about": "{{meta.description}}",
             "description": "{{meta.description}}",
-            "jobTitle": "Software Engineer",
-            "worksFor": [
-                {
-                    "@type": "Organization",
-                    "name": "Entelect",
-                    "legalName": "Entelect",
-                    "url": "https://entelect.co.za",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "url": "https://goo.gl/maps/94uXM5Mgd362",
-                        "streetAddress": "Johannesburg, South Africa",
-                        "addressCountry": {
-                            "@type": "Country",
-                            "name": "South Africa"
-                        }
-                    }
-                },
-                {
-                    "@type": "Organization",
-                    "name": "Red Ruby IT",
-                    "legalName": "Red Ruby IT",
-                    "url": "https://redrubyit.co.za",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "url": "https://goo.gl/maps/94uXM5Mgd362",
-                        "streetAddress": "Johannesburg, South Africa",
-                        "addressCountry": {
-                            "@type": "Country",
-                            "name": "South Africa"
-                        }
-                    }
+            "image": "{{images.favicon.x192}}",
+            "applicationCategory": "Application",
+            "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+            "softwareVersion": "{{version}}",
+            "version": "{{version}}",
+            "author": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "offers": {
+                "@type": "offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "name": "{{meta.appName}}",
+                "url": "{{rootUrl}}",
+                "image": "{{images.favicon.x192}}",
+                "description": "{{meta.description}}",
+                "itemOffered": {
+                    "@type": "service",
+                    "name": "{{meta.appName}}",
+                    "brand": {
+                        "@type": "brand",
+                        "name": "{{meta.appName}}",
+                        "url": "{{rootUrl}}",
+                        "logo": "{{images.favicon.x192}}",
+                        "image": "{{images.favicon.x192}}",
+                        "description": "{{meta.description}}"
+                    },
+                    "url": "{{rootUrl}}",
+                    "logo": "{{images.favicon.x192}}",
+                    "image": "{{images.favicon.x192}}",
+                    "description": "{{meta.description}}",
+                    "offers": [
+                        {{#each assistantApps as |app index|}}
+                            {{#if @index}},{{/if}}
+                            {
+                                "@type": "offer",
+                                "price": "0",
+                                "priceCurrency": "USD",
+                                "name": "{{app.title}}",
+                                "url": "{{app.link}}",
+                                "image": "{{app.image}}",
+                                "description": "{{app.description}}"
+                            }
+                        {{/each}}
+                    ]
                 }
-            ],
-            "owns": [
-                {
-                    "@type": "OwnershipInfo",
-                    "name": "Red Ruby IT",
-                    "url": "https://redrubyit.co.za"
-                }, 
-                {
-                    "@type": "SoftwareApplication",
-                    "name": "{{assistantAppsMeta.appName}}",
-                    "url": "{{assistantAppsMeta.rootUrl}}",
-                    "about": "{{assistantAppsMeta.description}}",
-                    "description": "{{assistantAppsMeta.description}}",
-                    "image": "{{assistantAppsMeta.favicon.x192}}",
-                    "applicationCategory": "Application",
-                    "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-                    "softwareVersion": "{{assistantAppsMeta.version}}",
-                    "version": "{{assistantAppsMeta.version}}",
-                    "author": {
-                        "@type": "Person",
-                        "name": "{{kurt.name}}",
-                        "givenName": "{{kurt.name}}",
-                        "familyName": "{{kurt.name}}",
-                        "additionalName": "{{kurt.additionalName}}",
-                        "url": "{{kurt.website}}",
-                        "image": "{{kurt.image}}",
-                        "description": "{{meta.description}}",
-                        "jobTitle": "Software Engineer"
-                    },
-                    "creator": {
-                        "@type": "Person",
-                        "name": "{{kurt.name}}",
-                        "givenName": "{{kurt.name}}",
-                        "familyName": "{{kurt.name}}",
-                        "additionalName": "{{kurt.additionalName}}",
-                        "url": "{{kurt.website}}",
-                        "image": "{{kurt.image}}",
-                        "description": "{{meta.description}}",
-                        "jobTitle": "Software Engineer"
-                    },
-                    "offers": {
-                        "@type": "offer",
-                        "price": "0",
-                        "priceCurrency": "USD",
-                        "name": "{{assistantAppsMeta.appName}}",
-                        "url": "{{assistantAppsMeta.rootUrl}}",
-                        "image": "{{assistantAppsMeta.favicon.x192}}",
-                        "description": "{{assistantAppsMeta.description}}",
-                        "itemOffered": {
-                            "@type": "service",
-                            "name": "{{assistantAppsMeta.appName}}",
-                            "brand": {
-                                "@type": "brand",
-                                "name": "{{assistantAppsMeta.appName}}",
-                                "url": "{{assistantAppsMeta.rootUrl}}",
-                                "logo": "{{assistantAppsMeta.favicon.x192}}",
-                                "image": "{{assistantAppsMeta.favicon.x192}}",
-                                "description": "{{assistantAppsMeta.description}}"
-                            },
-                            "url": "{{assistantAppsMeta.rootUrl}}",
-                            "logo": "{{assistantAppsMeta.favicon.x192}}",
-                            "image": "{{assistantAppsMeta.favicon.x192}}",
-                            "description": "{{assistantAppsMeta.description}}",
-                            "offers": [
-                                {{#each assistantApps as |app index|}}
-                                    {{#if @index}},{{/if}}
-                                    {
-                                        "@type": "offer",
-                                        "price": "0",
-                                        "priceCurrency": "USD",
-                                        "name": "{{app.title}}",
-                                        "url": "{{app.link}}",
-                                        "image": "{{app.image}}",
-                                        "description": "{{app.description}}"
-                                    }
-                                {{/each}}
-                            ]
-                        }
-                    },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "bestRating": "5",
-                        "ratingCount": "1",
-                        "reviewCount": "5",
-                        "ratingValue": "5"
-                    },
-                    "inLanguage": "en",
-                    "dateCreated": "{{date}}",
-                    "dateModified": "{{date}}",
-                    "datePublished": "{{date}}"
-                }
-            ],
-            "nationality": {
-                "@type": "Country",
-                "address": {
-                    "@type": "PostalAddress",
-                    "url": "https://goo.gl/maps/94uXM5Mgd362",
-                    "streetAddress": "Johannesburg, South Africa",
-                    "addressCountry": {
-                        "@type": "Country",
-                        "name": "South Africa"
-                    }
-                }
-            }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "bestRating": "5",
+                "ratingCount": "1",
+                "reviewCount": "5",
+                "ratingValue": "5"
+            },
+            "inLanguage": "en",
+            "dateCreated": "{{date}}",
+            "dateModified": "{{date}}",
+            "datePublished": "{{date}}"
         }
     </script>
-    <script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-97325462-2', 'auto'); ga('send', 'pageview');</script>
-    <style>
-        .full-page-loader img {
-            height: 150px;
-            margin-bottom: 1em;
-        }
-
-        .full-page-loader {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            background-color: #333333;
-            opacity: 0.85;
-        }
-
-        .full-page-loader .largeHeading {
-            color: #FFF;
-        }
-
-        .is-loading {
-            overflow: hidden;
-        }
-    </style>
 </head>
 
-<body class="is-preload is-loading">
-    <div class="full-page-loader"></div>
-    <div class="full-page-loader">
-        <ul>
-            <li style="list-style-type: none;"><img src="assets/images/loader.svg" alt="loading-animation">
-                <h2 class="largeHeading">Loading</h2>
-            </li>
-        </ul>
-    </div>
-    <div style="display: none">
-        <div class="h-card"><a class="p-name u-url" href="https://kurtlourens.com/" title="Kurt Lourens">Kurt
-                Lourens</a><img class="u-logo u-photo" src="/assets/images/KurtAvatar.svg" alt="Kurt Logo" />
-            <div class="p-category">Software Engineer</div>
-            <div class="p-note">
-                My goal is to continue learning all that I can and to live on the bleeding edge of tech.
-            </div>
-        </div>
-    </div>
-    <div id="announcements" onclick="KurtLourens.clearAnnouncements()"></div>
-    <header id="header"><i id="darkModeSwitch" onclick="KurtLourens.darkModeToggle()"
-            class="cursor-pointer icon icon-2x icon-brightness_4"></i>
-        <div class="inner"><a href="https://kurtlourens.com" class="image avatar" title="Kurt Lourens avatar"><img
-                    src="assets/images/loader.svg" data-src="{{kurt.image}}" class="lazy" alt="Kurt Lourens Avatar"
-                    title="Kurt Lourens Avatar" /></a>
-            <h1><strong>{{kurt.name}}</strong>&nbsp;
-                <span>Software Engineer&nbsp;<br /><small>Red Ruby IT Co-Owner</small></span>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <header id="header" class="alt">
+            <h1>
+                <a href="/" class="font-weight-light" title="Assistant for XYZ">Assistant for <span
+                        class="apps-word-slider font-weight-heavy"></span></a>
             </h1>
-            {{#each details.descriptions}}
-            <h4>{{this}}</h4>
-            {{/each}}
-            <div id="pwa-install" class="mt-1 hidden cursor-pointer" onclick="KurtLourens.addToHomeScreen()"><img
-                    src="assets/images/loader.svg" data-src="assets/images/pwa.png" class="max-h-50 lazy"
-                    alt="Install as PWA" /></div>
-            <div><a href="https://play.google.com/store/apps/details?id=com.kurt_lourens_cv" class="image"
-                    title="Kurt Lourens CV App" alt="PlayStoreBadge" target="_blank" rel="noopener noreferrer"><img
-                        src="assets/images/loader.svg" data-src="assets/images/playStore.png" class="max-h-50 lazy"
-                        alt="PlayStoreBadge" /></a></div>
-        </div>
-    </header>
-    <div id="main">
-        <section id="about">
-            <header class="major">
-                <h2>About Kurt Lourens&nbsp;</h2><i><a href="https://about.me/kurt.lourens" target="_blank"
-                        rel="noopener noreferrer" title="about.me" alt="about.me">about.me/kurt.lourens</a></i>
-            </header>
-            <p>
-                I found a love for computers in boarding school, I would spend many if not all break times playing games
-                and programming (then using Delphi). My interest in I.T. grew as I entered University to study a BSC
-                I.T. to become a&nbsp;Software Engineer. During my degree I found like minded individuals and
-                joined&nbsp;
-                <strong><a href="https://www.redrubyit.co.za" class="color-ruby" target="_blank"
-                        rel="noopener noreferrer" title="RedRubyIT" alt="RedRubyIT">Red Ruby IT</a></strong>&nbsp;as a
-                Co-Owner. I have learned so much from working at&nbsp;
-                <strong><a href="https://www.redrubyit.co.za" class="color-ruby" target="_blank"
-                        rel="noopener noreferrer" title="RedRubyIT" alt="RedRubyIT">
-                        Red Ruby IT
-                    </a></strong>&nbsp; and I am so lucky to be doing something that I love. My goal is to continue
-                learning all that I can and to live on the bleeding edge of tech until it bites me in the ass 😂. I am
-                currently living in&nbsp;<a href="https://goo.gl/maps/94uXM5Mgd362" target="_blank"
-                    rel="noopener noreferrer" title="Johannesburg, South africa">
-                    &nbsp;Johannesburg, South Africa 🌍
-                </a>.
-            </p><small>
-                P.S. I also have a&nbsp;
-                <strong><a href="https://blog.kurtlourens.com" target="_blank" rel="noopener noreferrer"
-                        title="Kurt's blog">blog</a></strong>, Inside my Mind - by Kurt Lourens. I haven't been making
-                use of it as much as I could have, but I have written an article on it about how I made this site and
-                all the effort I put in to make it the best that it could be&nbsp;
-                <strong><a href="https://blog.kurtlourens.com/kurtlourens-com-redesigned/" target="_blank"
-                        rel="noopener noreferrer" title="Kurt's blog">click here to read it</a></strong>&nbsp;😁.
-            </small>
-        </section>
-        <section id="work">
-            <h2 class="noselect" onclick="KurtLourens.toggleChildRowVisibility('work')">
-                Work Experience&nbsp;<i class="icon icon-chevron-up upsideDown"></i></h2>
-            <div class="row" style="display: none;">
-                {{#each workExperiences}}
-                {{> components/workItem }}
-                {{/each}}
+            <nav>
+                <a href="#menu" title="Menu">Menu</a>
+            </nav>
+        </header>
+        <nav id="menu">
+            <div class="inner">
+                <ul class="links">
+                    <li><a href="/" title="Home">Home</a></li>
+                    <li>
+                        <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
+                            rel="noopener noreferrer">{{kurt.name}}</a>
+                    </li>
+                    {{#each assistantApps}}
+                    {{#unless @last}}
+                    <li>
+                        <a href="{{urlref link}}" title="{{title}}" target="_blank"
+                            rel="noopener noreferrer">{{title}}</a>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+                <a href="#" class="close" title="close">Close</a>
             </div>
-        </section>
-        <section id="projects">
-            <h2 class="noselect" onclick="KurtLourens.toggleChildRowVisibility('projects')">
-                Projects&nbsp;<i class="icon icon-chevron-up upsideDown"></i></h2>
-            <div class="row" style="display: none;">
-                {{#each projects}}
-                {{> components/workItem }}
-                {{/each}}
-            </div>
-        </section>
-        <section id="certificates">
-            <h2 class="noselect" onclick="KurtLourens.toggleChildRowVisibility('certificates')">
-                Certificates&nbsp;<i class="icon icon-chevron-up upsideDown"></i></h2>
-            <div class="row" style="display: none;">
-                {{#each certificates}}
-                {{> components/workItem }}
-                {{/each}}
-            </div>
-        </section>
-        <section id="recentPosts">
-            <h2 class="noselect" onclick="KurtLourens.toggleChildRowVisibility('recentPosts')">
-                Latest Blog Posts&nbsp;<i class="icon icon-chevron-up upsideDown"></i></h2>
-            <div class="row" style="display: none;">
-                {{#each recentBlogPosts}}
-                {{> components/blogPost }}
-                {{/each}}
-            </div>
-        </section>
-        <section id="aboutThisSite">
-            <h2 class="noselect" onclick="KurtLourens.toggleChildRowVisibility('aboutThisSite')">
-                About this Website <i class="icon icon-chevron-up upsideDown"></i></h2>
-            <div class="row" style="display: none;">
-                <p>
-                    I originally built this website while I was in university. I had very little understanding of html,
-                    css, and javascript. I mostly copy-pasted html with inline styles and grabbed javascript from Stack
-                    Overflow to make the site 'work'. Around the&nbsp;
-                    <small class="label label-kurt">19th November 2018</small>
-                    &nbsp;I started rebuilding the site with the intention of making it small, fast, SEO friendly and to
-                    apply as much of what I had learned onto the new site. I wrote a blog post about the redesign&nbsp;
-                    <strong><a href="https://blog.kurtlourens.com/kurtlourens-com-redesigned/" target="_blank"
-                            rel="noopener noreferrer" title="Kurt's blog post on kurtlourens.com redesign"> click here
-                            to read it</a></strong>.
-                </p>
-                <div class="col-12"><span>As part of the redesign this website has an automated CI / CD
-                        pipeline:&nbsp;</span><img src="assets/images/loader.svg" class="lazy"
-                        data-src="https://khaoznet.visualstudio.com/KhaozNet/_apis/build/status/KhaozNet.CV.v2%20-%20CI"
-                        alt="Website build status" /><img src="assets/images/loader.svg" class="lazy"
-                        data-src="https://vsrm.dev.azure.com/khaoznet/_apis/public/Release/badge/b5441643-fd7c-4330-92d7-bffc23a7e0a4/15/20"
-                        alt="Website deployment status" /></div>
-                <div class="col-12"><span>
-                        The&nbsp;
-                        <strong><a href="https://play.google.com/store/apps/details?id=com.kurt_lourens_cv"
-                                target="_blank" rel="noopener noreferrer" title="GooglePlayStoreKurt'sCVApp"
-                                alt="GooglePlayStoreKurt'sCVApp">Flutter CV App</a></strong>&nbsp;also has an automated
-                        CI / CD pipeline:&nbsp;
-                    </span><img src="assets/images/loader.svg" class="lazy"
-                        data-src="https://khaoznet.visualstudio.com/KhaozNet/_apis/build/status/KhaozNet.FlutterCV%20-%20CI"
-                        alt="Website build status" /><img src="assets/images/loader.svg" class="lazy"
-                        data-src="https://khaoznet.vsrm.visualstudio.com/_apis/public/Release/badge/b5441643-fd7c-4330-92d7-bffc23a7e0a4/18/25"
-                        alt="Website deployment status" /></div>
-                <div class="col-12">
-                    <p>
-                        I created a blog post about my Flutter App's CI / CD pipeline,&nbsp;
-                        <strong><a href="https://blog.kurtlourens.com/flutter-with-ci-cd/" target="_blank"
-                                rel="noopener noreferrer" title="Kurt's blog post on Flutter with CI CD">click here to
-                                read it</a></strong>.
-                    </p>
+        </nav>
+        <section id="banner">
+            <div class="inner">
+                <div class="logo">
+                    <div class="apps-image-slider"></div>
                 </div>
+                <h2 class="font-weight-light">Assistant for <span class="apps-word-slider font-weight-heavy"></span>
+                </h2>
+                <p>{{subtitle}}</p>
             </div>
         </section>
+        <section id="wrapper">
+            {{#each assistantApps}}
+            {{> components/appSection }}
+
+            {{/each}}
+            <section class="wrapper primary-colour {{sectionclass assistantApps.length}}">
+                <div class="inner">
+                    <h2 class="major">{{additional}}</h2>
+                    <p>{{additionalDescription}}</p>
+                    <section class="features">
+                        {{#each features}}
+                        {{> components/appFeature }}
+
+                        {{/each}}
+                    </section>
+                    <!-- <ul class="actions">
+						<li><a href="#" class="button">Browse All</a></li>
+					</ul> -->
+                </div>
+            </section>
+        </section>
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">{{footer}}</h2>
+                <p>{{footerDescription}}</p>
+                <form id="contact_form">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input id="submit" type="submit" value="Send Message" /></li>
+                    </ul>
+                </form>
+                <ul class="contact">
+                    {{#each links}}
+                    <li class="{{class}}"><a href="{{urlref url}}" title="{{alt}}" target="_blank"
+                            rel="noopener noreferrer">{{title}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                <div id="success_message">
+                    <h2>Successfully submitted contact form!</h2>
+                </div>
+                <div id="error_message">
+                    <h2>Sorry!! Something went wrong, please try sending an email instead.</h2>
+                </div>
+                <ul class="copyright">
+                    <li>&copy; {{meta.appName}}. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net" title="html5up" target="_blank"
+                            rel="noopener noreferrer">HTML5 UP</a></li>
+                    <li>{{version}}</li>
+                </ul>
+            </div>
+        </section>
+
     </div>
-    <footer id="footer">
-        <div class="inner">
-            <ul class="icons">
-                {{#each details.socialLinks}}
-                {{> components/iconLink }}
-                {{/each}}
-            </ul>
-            <ul class="copyright">
-                <li>
-                    &copy;&nbsp;{{kurt.name}}
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <script async defer src="/assets/js/bundle.js?{{date}}" type="text/javascript"></script>
+
+    <!-- Scripts -->
+    <script src="/dist/bundle.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,10 @@
+a.special:not(.button) {
+    &.fit {
+        display: inline-block;
+        width: 100%;
+
+        @include breakpoint('>medium') {
+            width: 45%;
+        }
+    }
+}

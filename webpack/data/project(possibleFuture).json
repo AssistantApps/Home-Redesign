@@ -24,8 +24,7 @@
     "footerDescription": "Feel free to get in contact with us! we have a Discord server if you would like to talk directly to us. Otherwise you can use the form below and we will get back to you as soon as we can.",
     "twitter": {
         "handle": "@AssistantNMS",
-        "imageAlt": "Logo of the Assistant Apps",
-        "metaImageSize": "summary_large_image"
+        "imageAlt": "Logo of the Assistant Apps"
     },
     "images": {
         "maskIcon": "/safari-pinned-tab.svg",
@@ -47,8 +46,8 @@
             "x152": "assets/favicon/apple-icon-152x152.png",
             "x180": "assets/favicon/apple-icon-180x180.png"
         },
-        "twitter": "https://mugshotbot.com/m/zkrIydZc",
-        "facebook": "https://mugshotbot.com/m/zkrIydZc"
+        "twitter": "https://assistantapps.com/assets/img/twitter.png",
+        "facebook": "https://assistantapps.com/assets/img/fb.png"
     },
     "assistantApps": [
         {
@@ -112,6 +111,15 @@
             ]
         },
         {
+            "game": "Hytale",
+            "title": "Assistant for Hytale",
+            "link": "https://hytaleassistant.com",
+            "image": "https://cdn.assistantapps.com/assistantHYT.png",
+            "icon": "https://cdn.assistantapps.com/icon/assistantHYT.png",
+            "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
+            "links": []
+        },
+        {
             "game": "Coming Soon",
             "title": "Assistant for Unknown",
             "link": "#",
@@ -130,7 +138,7 @@
         },
         {
             "title": "Discord",
-            "url": "https://assistantapps.com/discord",
+            "url": "https://discord.gg/q3aFBQM",
             "class": "icon-discord",
             "alt": "Discord"
         },
@@ -139,12 +147,6 @@
             "url": "https://twitter.com/KhaozTopsy",
             "class": "icon-twitter",
             "alt": "Twitter"
-        },
-        {
-            "title": "Github",
-            "url": "https://assistantapps.com/github",
-            "class": "icon-github",
-            "alt": "Github"
         },
         {
             "title": "Github",
@@ -189,34 +191,16 @@
     ],
     "redirects": [
         {
-            "pattern": "Discord",
+            "pattern": "discord",
             "url": "https://discord.gg/q3aFBQM"
         },
         {
-            "pattern": "Github",
+            "pattern": "github",
             "url": "https://github.com/AssistantApps"
         },
         {
-            "pattern": "Kurt",
+            "pattern": "kurt",
             "url": "https://kurtlourens.com"
-        }
-    ],
-    "headers": [
-        {
-            "name": "Content-Security-Policy",
-            "value": "default-src 'none'; script-src 'self' 'report-sample'; style-src 'self' 'report-sample' https://fonts.googleapis.com/css2; img-src 'self' data: cdn.assistantapps.com; font-src 'self' fonts.gstatic.com; manifest-src https://assistantapps.com/manifest.json; connect-src api.assistantapps.com; base-uri 'self'; report-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
-        },
-        {
-            "name": "X-Content-Security-Policy",
-            "value": "default-src 'none'; script-src 'self' 'report-sample'; style-src 'self' 'report-sample' https://fonts.googleapis.com/css2; img-src 'self' data: cdn.assistantapps.com; font-src 'self' fonts.gstatic.com; manifest-src https://assistantapps.com/manifest.json; connect-src api.assistantapps.com; base-uri 'self'; report-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
-        },
-        {
-            "name": "X-WebKit-CSP",
-            "value": "default-src 'none'; script-src 'self' 'report-sample'; style-src 'self' 'report-sample' https://fonts.googleapis.com/css2; img-src 'self' data: cdn.assistantapps.com; font-src 'self' fonts.gstatic.com; manifest-src https://assistantapps.com/manifest.json; connect-src api.assistantapps.com; base-uri 'self'; report-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;"
-        },
-        {
-            "name": "Set-Cookie",
-            "value": "cross-site-cookie=name; SameSite=None; Secure"
         }
     ]
 }
