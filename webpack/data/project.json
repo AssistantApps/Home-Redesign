@@ -115,8 +115,8 @@
             "game": "Coming Soon",
             "title": "Assistant for Unknown",
             "link": "#",
-            "image": "/assets/img/unknown.png",
-            "icon": "/assets/img/unknown.png",
+            "image": "/assets/img/Unknown.webp",
+            "icon": "/assets/img/Unknown.webp",
             "description": "Yet another Assistant app is under development. Can you guess what game it will be about? Let us know what you think we are working on 😁",
             "links": []
         }
@@ -156,7 +156,7 @@
     "features": [
         {
             "title": "DevTalk",
-            "image": "./assets/img/devtalk.png",
+            "image": "./assets/img/devtalk.webp",
             "link": "https://www.youtube.com/playlist?list=PLIjFqYF1O-TDACR0Kz8h0OXfolRHCiUE5",
             "description": "DevTalk is a weekly stream where we talked about what was happening in the No Man's Sky universe, coding, tech and developer stories.",
             "subLinks": [
