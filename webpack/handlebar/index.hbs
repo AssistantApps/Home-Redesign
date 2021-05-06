@@ -75,14 +75,18 @@
     <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
 
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    {{#each preconnect}}
+    <link rel="preconnect" href="{{this}}">
+    {{/each}}
+    {{#each assistantApps}}
+    <link rel="preload" href="{{icon}}" as="image">
+    {{/each}}
+
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
-    {{#each assistantApps}}
-    <link rel="preload" href="{{icon}}" as="image">
-    {{/each}}
 
     {{!-- JSON-LD --}}
     <script type="application/ld+json">

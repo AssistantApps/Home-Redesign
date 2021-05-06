@@ -26,6 +26,10 @@
         "handle": "@AssistantNMS",
         "imageAlt": "Logo of the Assistant Apps"
     },
+    "preconnect": [
+        "https://fonts.gstatic.com",
+        "https://cdn.assistantapps.com"
+    ],
     "images": {
         "maskIcon": "/safari-pinned-tab.svg",
         "favicon": {
