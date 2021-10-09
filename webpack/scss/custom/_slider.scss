@@ -1,21 +1,29 @@
 @import './_slider-generated.sass';
 
-.apps-word-slider {
+.apps-start-word-slider {
     &::after {
-        content: "everything!";
-        animation: appsWordSliderText #{$appAnimationDuration}s infinite;
+        content: "Assistant for ";
+        animation: appsWordSliderStartText #{$appAnimationDuration}s infinite;
         overflow: hidden;
     }
 }
 
-#banner>.inner .apps-word-slider {
+.apps-end-word-slider {
+    &::after {
+        content: "everything!";
+        animation: appsWordSliderEndText #{$appAnimationDuration}s infinite;
+        overflow: hidden;
+    }
+}
+
+#banner>.inner .apps-end-word-slider {
     @include breakpoint('<medium') {
         display: block;
     }
 }
 
-@keyframes appsWordSliderText {
-    @for $titleIndex from 1 through length($appTitles) {
+@keyframes appsWordSliderStartText {
+    @for $titleIndex from 1 through length($appStartTitles) {
         $percentageLower: (($titleIndex - 1) * $appAnimationPerc)+1;
         $percentage: ($titleIndex * $appAnimationPerc);
 
@@ -23,7 +31,40 @@
             $percentageLower: 0;
         }
 
-        $title: nth($appTitles, $titleIndex);
+        $title: nth($appStartTitles, $titleIndex);
+
+        #{$percentageLower}#{"%"} {
+            opacity: 0;
+            content: $title;
+        }
+
+        #{$percentageLower + $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            content: $title;
+        }
+
+        #{$percentage - $appAnimationGapPerc}#{"%"} {
+            opacity: 1;
+            content: $title;
+        }
+
+        #{$percentage}#{"%"} {
+            opacity: 0;
+            content: $title;
+        }
+    }
+}
+
+@keyframes appsWordSliderEndText {
+    @for $titleIndex from 1 through length($appStartTitles) {
+        $percentageLower: (($titleIndex - 1) * $appAnimationPerc)+1;
+        $percentage: ($titleIndex * $appAnimationPerc);
+
+        @if $titleIndex==1 {
+            $percentageLower: 0;
+        }
+
+        $title: nth($appEndTitles, $titleIndex);
 
         #{$percentageLower}#{"%"} {
             opacity: 0;
