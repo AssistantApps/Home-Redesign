@@ -94,6 +94,7 @@
     background-image: url($defaultAppImage);
     background-repeat: round;
     animation: appsImageSliderText #{$appAnimationDuration}s infinite;
+    border-radius: 5px;
 
     @include breakpoint('<medium') {
         margin: 0 auto;
