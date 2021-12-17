@@ -8,6 +8,9 @@
         "additionalName": "KhaozTopsy",
         "twitter": "@KhaozTopsy"
     },
+    "link": {
+        "tools": "https://tools.assistantapps.com"
+    },
     "theme": {
         "colour": "#4285f4",
         "maskColour": "#2b5797"
