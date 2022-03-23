@@ -42,7 +42,8 @@ $(function () {
         var formObj = {
             name: form[0][0]?.value || '',
             email: form[0][1]?.value || '',
-            message: form[0][2]?.value || ''
+            message: form[0][2]?.value || '',
+            captcha: form[0][4]?.value || ''
         };
 
         $.ajax({
