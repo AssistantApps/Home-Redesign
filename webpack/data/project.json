@@ -9,7 +9,8 @@
         "twitter": "@KhaozTopsy"
     },
     "link": {
-        "tools": "https://tools.assistantapps.com"
+        "tools": "https://tools.assistantapps.com",
+        "discord": "https://assistantapps.com/discord"
     },
     "theme": {
         "colour": "#4285f4",
@@ -59,6 +60,7 @@
     },
     "assistantApps": [
         {
+            "shortCode": "nms",
             "game": "No Man's Sky",
             "title": "Assistant for No Man's Sky",
             "titleStart": "Assistant for",
@@ -67,6 +69,7 @@
             "image": "https://cdn.assistantapps.com/assistantNMS.webp",
             "icon": "https://cdn.assistantapps.com/icon/assistantNMS.webp",
             "description": "The first of the Assistant apps! This app was relased on the 12th of August 2019 and reached 40 000 active users on Android 1 year later. The app is available on Android, iOS and a simplified version is available for Web",
+            "documentation": "https://docs.assistantapps.com/#/apps/nms-main",
             "links": [
                 {
                     "title": "Apple App Store",
@@ -91,6 +94,7 @@
             ]
         },
         {
+            "shortCode": "sms",
             "game": "Scrap Mechanic",
             "title": "Assistant for Scrap Mechanic",
             "titleStart": "Assistant for",
@@ -99,6 +103,7 @@
             "image": "https://cdn.assistantapps.com/assistantSMS.webp",
             "icon": "https://cdn.assistantapps.com/icon/assistantSMS.webp",
             "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
+            "documentation": "https://docs.assistantapps.com/#/apps/sms-main",
             "links": [
                 {
                     "title": "Apple App Store",
@@ -123,14 +128,16 @@
             ]
         },
         {
+            "shortCode": "kronos",
             "game": "Guides for Zombies",
             "title": "Kronos: Guides for Zombies",
             "titleStart": "Kronos:",
             "titleEnd": "Guides for Zombies",
-            "link": "https://play.google.com/store/apps/details?id=companion.kronosflutter",
+            "link": "https://kronosguides.app",
             "image": "https://cdn.assistantapps.com/kronos.jpg",
             "icon": "https://cdn.assistantapps.com/icon/kronos.jpg",
             "description": "Do you play Zombies? Tired of having to search for guides when playing? Let this app do the work for you! Join the community of over 50,000 to stay up-to-date with the latest Zombies Easter Eggs with Kronos - the zombies companion!",
+            "documentation": "https://docs.assistantapps.com/#/apps/kgz-main",
             "links": [
                 {
                     "title": "Apple App Store",
@@ -234,6 +241,18 @@
         {
             "pattern": "Kurt",
             "url": "https://kurtlourens.com"
+        },
+        {
+            "pattern": "kronos",
+            "url": "https://apps.apple.com/us/app/kronos-cod-zombies-companion/id1438078478?ls=1"
+        },
+        {
+            "pattern": "kronosios",
+            "url": "https://apps.apple.com/us/app/kronos-cod-zombies-companion/id1438078478?ls=1"
+        },
+        {
+            "pattern": "kronosandroid",
+            "url": "https://play.google.com/store/apps/details?id=companion.kronosflutter"
         }
     ],
     "headers": [

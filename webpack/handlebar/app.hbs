@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="{{title}}">
+    <title>{{title}}</title>
+    <link rel="icon" type="image/png" href="{{icon}}">
+
+    <link rel="index" href="{{assApp.link}}">
+    <link rel="canonical" href="{{assApp.link}}">
+    <meta name="referrer" content="no-referrer">
+    <link rel="manifest" href="manifest.json">
+    <link rel="author" href="humans.txt">
+    <link rel="me" href="{{kurt.email}}">
+    <link rel="me" href="{{kurt.website}}" type="text/html">
+    <link rel="search" href="open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
+
+    <meta name="theme-color" content="{{theme.colour}}">
+    <meta name="subject" content="{{description}}">
+    <meta name="description" content="{{description}}">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index,follow">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="{{image}}">
+    <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+    <meta name="apple-mobile-web-app-title" content="{{title}}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="{{twitter.metaImageSize}}">
+    <meta name="twitter:site" content="{{twitter.handle}}">
+    <meta name="twitter:creator" content="{{kurt.twitter}}">
+    <meta name="twitter:url" content="{{assApp.link}}">
+    <meta name="twitter:title" content="{{appName}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="{{images.twitter}}">
+    <meta name="twitter:image:alt" content="{{twitter.imageAlt}}">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="{{assApp.link}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:image" content="{{images.facebook}}">
+    <meta property="og:image:alt" content="{{twitter.imageAlt}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:site_name" content="{{title}}">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="{{kurt.name}}">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
+
+    <link rel="stylesheet" href="/assets/css/appPage.css">
+
+    {{#each preconnect}}
+    <link rel="preconnect" href="{{this}}">
+    {{/each}}
+
+    {{!--
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet"> --}}
+    {{!-- <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript> --}}
+
+    {{!-- JSON-LD --}}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "SoftwareApplication",
+            "name": "{{title}}",
+            "url": "{{link}}",
+            "about": "{{description}}",
+            "description": "{{description}}",
+            "image": "{{image}}",
+            "applicationCategory": "Application",
+            "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+            "author": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "{{kurt.name}}",
+                "givenName": "{{kurt.name}}",
+                "familyName": "{{kurt.name}}",
+                "additionalName": "{{kurt.additionalName}}",
+                "url": "{{kurt.website}}",
+                "image": "{{kurt.image}}",
+                "description": "{{meta.description}}",
+                "jobTitle": "Software Engineer"
+            },
+            "inLanguage": "en",
+            "dateCreated": "{{date}}",
+            "dateModified": "{{date}}",
+            "datePublished": "{{date}}"
+        }
+    </script>
+</head>
+
+<body class="is-preload">
+
+    <div class="page-wrapper">
+        <div role="banner" class="header w-nav">
+            <div class="container-default w-container">
+                <div class="header-wrapper">
+                    <div class="split-content header-right">
+                        <a href="/" class="header-logo-link w-nav-brand">
+                            <img src="{{icon}}" alt="Logo" class="header-logo"
+                                style="max-width: 50px; border-radius: 10px" />
+                            <span style="color: white; margin-left: 1em">{{{title}}}</span>
+                        </a>
+                    </div>
+                    <div class="split-content header-middle">
+                        <nav role="navigation" class="nav-menu w-nav-menu">
+                            <ul role="list" class="header-navigation">
+                                <li class="nav-item-wrapper first">
+                                    <a href="/" aria-current="page" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item-wrapper">
+                                    <a href="{{documentation}}" class="nav-link" target="_blank">Documentation</a>
+                                </li>
+                                <li class="nav-item-wrapper">
+                                    <a href="{{rootLinks.discord}}" class="nav-link" target="_blank">Discord</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="split-content header-left">
+                        <div class="nav-button-wrapper hide-in-mobile">
+                            <a href="{{link}}" class="button-primary small w-button">App homepage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section home-hero wf-section">
+            <div class="container-default">
+                <div class="grid-2-columns home-hero">
+                    <div>
+                        <h1>{{title}}</h1>
+                        <div class="inner-container-550px">
+                            <p>{{description}}</p>
+                        </div>
+                    </div>
+                    <div class="app-icon-container">
+                        <img src="{{image}}" alt="logo" class="home-hero" />
+                    </div>
+                    <div class="image-wrapper home-hero-image">
+                        <img src="https://assets.website-files.com/61772ea4a9789e72c321a4f0/61798a300dcdcc32bfd14121_blob-01-defi-x-template.png"
+                            alt="" class="blob home-hero" />
+                    </div>
+                </div>
+                <div class="mg-top-48px">
+                    {{#each links as |link index|}}
+                    <a href="{{link.url}}" title="{{link.title}}" target="_blank"
+                        class="button-secondary _2-buttons w-button">
+                        {{link.title}}
+                    </a>&nbsp;&nbsp;
+                    {{/each}}
+                </div>
+            </div>
+            <div class="bg home-hero-left-overlay"></div>
+            <div class="bg bottom-gradient-overlay"></div>
+        </div>
+    </div>
+</body>
+
+</html>
