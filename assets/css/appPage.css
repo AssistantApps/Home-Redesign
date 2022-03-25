@@ -1289,6 +1289,15 @@ figcaption {
   line-height: 28px;
 }
 
+.header-logo-link{
+  color: white; 
+  margin-left: 1em;
+}
+
+.header-logo {
+  max-width: 50px; 
+  border-radius: 10px;
+}
 
 .app-icon-container {
   text-align: right;
