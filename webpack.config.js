@@ -9,6 +9,7 @@ const distPath = path.resolve(__dirname, dirName);
 const packageVersion = require('./package.json').version || '1.0.0';
 
 module.exports = (env, argv) => {
+    process.env['NODE_ENV'] = packageVersion;
     return {
         mode: argv.mode === "production" ? "production" : "development",
         entry: [
@@ -50,7 +51,7 @@ module.exports = (env, argv) => {
                     urlref: require("./webpack/handlebar/helpers/urlref.helper"),
                     loud: require("./webpack/handlebar/helpers/loud.helper"),
                     date: require("./webpack/handlebar/helpers/date.helper"),
-                    version: require("./webpack/handlebar/helpers/version.helper")(packageVersion)
+                    version: require("./webpack/handlebar/helpers/version.helper")
                 },
 
                 // hooks
