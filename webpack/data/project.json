@@ -296,6 +296,10 @@
         {
             "name": "Set-Cookie",
             "value": "cross-site-cookie=name; SameSite=None; Secure"
+        },
+        {
+            "name": "X-Clacks-Overhead",
+            "value": "GNU Terry Pratchett"
         }
     ]
 }
