@@ -9,6 +9,7 @@ const loudHelper = require('../handlebar/helpers/loud.helper.js');
 const urlrefHelper = require('../handlebar/helpers/urlref.helper.js');
 const versionHelper = require('../handlebar/helpers/version.helper.js');
 const sectionClassHelper = require('../handlebar/helpers/sectionclass.helper.js');
+const urlrefescapedHelper = require('../handlebar/helpers/urlrefescaped.helper.js');
 
 const readFile = util.promisify(fs.readFile);
 
@@ -22,6 +23,7 @@ async function generateOtherFiles() {
     Handlebars.registerHelper('urlref', urlrefHelper);
     Handlebars.registerHelper('version', versionHelper);
     Handlebars.registerHelper('sectionclass', sectionClassHelper);
+    Handlebars.registerHelper('urlrefescaped', urlrefescapedHelper);
 
     for (const assApp of projectData.assistantApps) {
         if (assApp.shortCode == null || assApp.shortCode.length < 2) continue;
