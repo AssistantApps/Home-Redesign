@@ -300,6 +300,10 @@
         {
             "name": "X-Clacks-Overhead",
             "value": "GNU Terry Pratchett"
+        },
+        {
+            "name": "X-Clacks-Overhead",
+            "value": "GNU Eddie the Magic Doggo"
         }
     ]
 }
