@@ -299,11 +299,15 @@
         },
         {
             "name": "X-Clacks-Overhead",
-            "value": "GNU Terry Pratchett"
+            "value": "GNU Terry Pratchett, Eddie the Magic Doggo"
         },
         {
             "name": "Clacks-Overhead",
-            "value": "GNU Eddie the Magic Doggo"
+            "value": "GNU Terry Pratchett, Eddie the Magic Doggo"
+        },
+        {
+            "name": "X-PoweredBy",
+            "value": "Magic &amp; the Distraction Squad"
         }
     ]
 }
