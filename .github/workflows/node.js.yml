@@ -25,7 +25,7 @@ jobs:
         
     - name: Build JS
       run: |
-        npm ci
+        npm install
         npm run build
     
     - name: Deploy to GitHub Pages
