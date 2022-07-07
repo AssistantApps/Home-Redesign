@@ -27,6 +27,10 @@ jobs:
       run: |
         npm install
         npm run build
+        
+    - name: Edit .gitignore
+      run: |
+        echo "/node_modules" >> .gitignore
     
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.3.4
