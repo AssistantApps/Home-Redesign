@@ -260,15 +260,15 @@
     ],
     "redirects": [
         {
-            "pattern": "Discord",
+            "pattern": "discord",
             "url": "https://discord.gg/q3aFBQM"
         },
         {
-            "pattern": "Github",
+            "pattern": "github",
             "url": "https://github.com/AssistantApps"
         },
         {
-            "pattern": "Kurt",
+            "pattern": "kurt",
             "url": "https://kurtlourens.com"
         },
         {
