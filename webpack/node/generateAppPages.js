@@ -39,8 +39,8 @@ async function generateOtherFiles() {
             ...assApp
         };
         const compiledTemplate = templateFunc(templateData);
-        
-        if (!fs.existsSync(assApp.shortCode)){
+
+        if (!fs.existsSync(assApp.shortCode)) {
             fs.mkdirSync(assApp.shortCode);
         }
         fs.writeFile(`./${assApp.shortCode}/index.html`, compiledTemplate, ['utf8'], () => { });
