@@ -45,6 +45,21 @@ async function generateOtherFiles() {
         }
         fs.writeFile(`./${assApp.shortCode}/index.html`, compiledTemplate, ['utf8'], () => { });
     }
+
+    for (const redirect of projectData.redirects) {
+        const template = await readFile(`./webpack/handlebar/redirect.hbs`, 'utf8');
+        const templateFunc = Handlebars.compile(template);
+        const templateData = {
+            title: redirect.pattern,
+            url: redirect.url
+        };
+        const compiledTemplate = templateFunc(templateData);
+
+        if (!fs.existsSync(redirect.pattern)) {
+            fs.mkdirSync(redirect.pattern);
+        }
+        fs.writeFile(`./${redirect.pattern}/index.html`, compiledTemplate, ['utf8'], () => { });
+    }
 }
 
 generateOtherFiles();

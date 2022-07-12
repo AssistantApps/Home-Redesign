@@ -9,8 +9,6 @@ Header add Clacks-Overhead: "GNU Terry Pratchett, Eddison the Magic Doggo"
 Header add X-Powered-by: "Magic &amp; the Distraction Squad"
 
 
-RewriteRule ^/Robots.txt/(.*)$ /robots.txt?ref=AssistantApps [R=301,NC,L]
-RewriteRule ^/Sitemap.xml/(.*)$ /sitemap.xml?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^Discord/(.*)$ https://discord.gg/q3aFBQM?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^Github/(.*)$ https://github.com/AssistantApps?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^Kurt/(.*)$ https://kurtlourens.com?ref=AssistantApps [R=301,NC,L]
