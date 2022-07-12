@@ -260,6 +260,14 @@
     ],
     "redirects": [
         {
+            "pattern": "/Robots.txt",
+            "url": "/robots.txt"
+        },
+        {
+            "pattern": "/Sitemap.xml",
+            "url": "/sitemap.xml"
+        },
+        {
             "pattern": "Discord",
             "url": "https://discord.gg/q3aFBQM"
         },

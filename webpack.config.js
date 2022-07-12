@@ -76,6 +76,12 @@ module.exports = (env, argv) => {
                             console.log('The _slider-generated.sass file has been renamed');
                         })();
                     }
+                    if (filename.includes('.htaccess')) {
+                        (async () => {
+                            await moveFile('.htaccess.html', `\.htaccess`);
+                            console.log('The htaccess file has been renamed');
+                        })();
+                    }
                 }
             }),
         ],
