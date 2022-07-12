@@ -59,6 +59,7 @@ async function generateOtherFiles() {
             fs.mkdirSync(redirect.pattern);
         }
         fs.writeFile(`./${redirect.pattern}/index.html`, compiledTemplate, ['utf8'], () => { });
+        fs.writeFile(`./${redirect.pattern.toLowerCase()}/index.html`, compiledTemplate, ['utf8'], () => { });
     }
 }
 
