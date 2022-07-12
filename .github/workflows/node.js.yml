@@ -32,6 +32,7 @@ jobs:
       - name: Edit .gitignore
         run: |
           echo "/node_modules" > .gitignore
+          echo "/github-pages-deploy-action-temp-deployment-folder" >> .gitignore
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.4
