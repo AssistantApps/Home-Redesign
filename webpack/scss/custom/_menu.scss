@@ -1,0 +1,66 @@
+#menu-toggle {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include vendor("transition", "background-color #{_duration(transition)} ease-in-out");
+    border-radius: _size(border-radius);
+    box-shadow: inset 0 0 0 2px _palette(border);
+    padding: 0 1em;
+    font-size: 1.25em;
+
+    &:before {
+        content: "\1f354";
+        line-height: inherit;
+        font-family: "icomoon";
+    }
+
+    &:hover {
+        background-color: _palette(border-bg);
+    }
+
+    &:active {
+        background-color: _palette(border2-bg);
+    }
+
+    &:before {
+        float: right;
+        margin-left: 0.75em;
+    }
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #060b0fcc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000;
+
+    // opacity: 0;
+    pointer-events: none;
+
+    .menu-inner {
+        min-width: 600px;
+        min-height: 350px;
+        margin: 0 auto;
+        padding: 2em;
+        background-color: _palette(textbg);
+        border-radius: 25px;
+
+        a {
+            text-decoration: none;
+            border: none;
+        }
+    }
+}
+
+#toggle:checked ~ #menu {
+    opacity: 1;
+}

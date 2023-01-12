@@ -181,37 +181,30 @@
 <body class="is-preload">
     <div id="page-wrapper" class="bootstrap-wrapper">
         <header id="header" class="alt">
-            <h1>
-                <a href="/" title="Assistant for XYZ">
-                    <span class="apps-start-word-slider font-weight-light"></span>
-                    <span class="apps-end-word-slider font-weight-heavy"></span>
-                </a>
-            </h1>
-            <nav>
-                <a href="#menu" title="Menu">Menu</a>
+            <label id="menu-toggle" for="toggle">Menu</label>
+            <input type="checkbox" id="toggle">
+            <nav id="menu">
+                <div class="menu-inner">
+                    <ul class="links">
+                        <li><a href="/" title="Home">Home</a></li>
+                        <li><a href="{{urlref link.tools}}" title="Translation Tool">Translation Tool</a></li>
+                        <li>
+                            <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
+                                rel="noopener noreferrer">{{kurt.name}}</a>
+                        </li>
+                        {{#each assistantApps}}
+                        {{#unless @last}}
+                        <li>
+                            <a href="{{urlref link}}" title="{{title}}" target="_blank"
+                                rel="noopener noreferrer">{{title}}</a>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                    <a href="#" class="close" title="close">Close</a>
+                </div>
             </nav>
         </header>
-        <nav id="menu">
-            <div class="inner">
-                <ul class="links">
-                    <li><a href="/" title="Home">Home</a></li>
-                    <li><a href="{{urlref link.tools}}" title="Translation Tool">Translation Tool</a></li>
-                    <li>
-                        <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
-                            rel="noopener noreferrer">{{kurt.name}}</a>
-                    </li>
-                    {{#each assistantApps}}
-                    {{#unless @last}}
-                    <li>
-                        <a href="{{urlref link}}" title="{{title}}" target="_blank"
-                            rel="noopener noreferrer">{{title}}</a>
-                    </li>
-                    {{/unless}}
-                    {{/each}}
-                </ul>
-                <a href="#" class="close" title="close">Close</a>
-            </div>
-        </nav>
         <section id="banner">
             <div class="inner">
                 <div class="row">
@@ -226,12 +219,22 @@
                     </div>
                     <div class="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="screenshot-stack">
-                            <div class="apps-screenshot-slider-bg">
-                                <div class="assistantapps-logo"></div>
-                                <div class="assistantapps-logo"></div>
+                            <div class="apps-screenshot">
+                                <div class="screenshot-inner">
+                                    <div class="apps-left-screenshot-slider-bg"></div>
+                                    <div class="assistantapps-logo"></div>
+                                    <div class="apps-left-screenshot-slider"></div>
+                                    <img src="/assets/img/screenshot-frame.png" alt="phone frame" />
+                                </div>
                             </div>
-                            <div class="apps-screenshot-slider"></div>
-                            <div class="apps-screenshot-slider-frame"></div>
+                            <div class="apps-screenshot">
+                                <div class="screenshot-inner">
+                                    <div class="apps-left-screenshot-slider-bg"></div>
+                                    <div class="assistantapps-logo"></div>
+                                    <div class="apps-right-screenshot-slider"></div>
+                                    <img src="/assets/img/screenshot-frame.png" alt="phone frame" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -293,7 +296,7 @@
 
         <section id="footer">
             <div class="important">
-                <span>&copy; {{meta.appName}}. All rights reserved. {{version}}</span>
+                <span>&copy; {{meta.appName}}. All rights reserved.</span>
                 <span>&nbsp;|&nbsp;</span>
                 <span>
                     <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
@@ -302,6 +305,8 @@
                     <a href="/terms_and_conditions.html" target="_blank" rel="noopener noreferrer">Terms &amp;
                         Conditions</a>
                 </span>
+                <span>&nbsp;|&nbsp;</span>
+                <span>{{version}}</span>
             </div>
 
             <span class="seperator"></span>

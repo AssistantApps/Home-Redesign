@@ -5,6 +5,7 @@
 @import "./custom/wrapper";
 @import "./custom/footer";
 @import "./custom/icomoon";
+@import "./custom/menu";
 
 #header h1 {
     @include breakpoint("<xsmall") {

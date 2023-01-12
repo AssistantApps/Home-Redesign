@@ -31,13 +31,16 @@
     .icons,
     .important {
         display: flex;
-
         a {
             text-decoration: none;
             border: none;
+        }
+    }
 
+    .important {
+        a {
             &:hover {
-                color: _palette(primary);
+                color: _palette(primary) !important;
             }
         }
     }
