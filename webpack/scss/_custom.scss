@@ -1,16 +1,19 @@
-@import './custom/slider';
-@import './custom/wrapper';
-@import './custom/buttons';
-@import './custom/icomoon';
+@import "./custom/general";
+@import "./custom/banner";
+@import "./custom/slider";
+@import "./custom/scroll-down-indicator";
+@import "./custom/wrapper";
+@import "./custom/footer";
+@import "./custom/icomoon";
 
 #header h1 {
-    @include breakpoint('<xsmall') {
+    @include breakpoint("<xsmall") {
         display: none;
     }
 }
 
-#banner>.inner {
-    @include breakpoint('<medium') {
+#banner > .inner {
+    @include breakpoint("<medium") {
         text-align: center;
     }
 }
@@ -18,7 +21,7 @@
 #menu .inner {
     width: 95vw;
 
-    @include breakpoint('>=medium') {
+    @include breakpoint(">=medium") {
         width: 50vw;
     }
 

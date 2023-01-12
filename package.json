@@ -5,10 +5,11 @@
   "author": "Kurt Lourens",
   "scripts": {
     "build": "npm-run-all --sequential javascript:* sass:*",
-    "javascript:main": "webpack --progress --profile --mode production",
+    "javascript:main": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
     "javascript:metapages": "node ./webpack/node/generateAppPages.js",
     "sass:main": "sass webpack/scss/main.scss assets/css/main.css",
-    "sass:noscript": "sass webpack/scss/noscript.scss assets/css/noscript.css"
+    "sass:noscript": "sass webpack/scss/noscript.scss assets/css/noscript.css",
+    "watch:sass": "nodemon -e scss -x \"npm run sass:main\""
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "move-file": "^2.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.26.10",
+    "nodemon": "^2.0.20",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1"
   }

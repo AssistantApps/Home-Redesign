@@ -1,0 +1,44 @@
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #c0c0c0;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #242943;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2a2f4a;
+    background-image: -webkit-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+}
+
+html,
+body {
+    background-color: #060b0f;
+}
+
+#page-wrapper > #banner,
+#page-wrapper > #wrapper > .features,
+#page-wrapper > #wrapper-work,
+#page-wrapper > #contactus {
+    margin-bottom: 7em;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.mb-2 {
+    margin-bottom: 2em;
+}

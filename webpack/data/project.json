@@ -22,7 +22,7 @@
         "description": "Home page of the Assistant Apps. Get the apps on Google Play, Apple App Store and on the web"
     },
     "subtitle": "Beautiful and fast cross-platform apps built to help you in your favourite games!",
-    "additional": "Additional work",
+    "additional": "Assistant work",
     "additionalDescription": "Working on these projects has opened up opportunities to talk to other community developers, host streams and start organisations all aimed at entertaining and assisting gamers enjoy their games to the fullest!!",
     "footer": "Get in touch",
     "footerDescription": "Feel free to get in contact with us! we have a Discord server if you would like to talk directly to us. Otherwise you can use the form below and we will get back to you as soon as we can.",
@@ -68,28 +68,39 @@
             "link": "https://nmsassistant.com",
             "image": "https://cdn.assistantapps.com/assistantNMS.webp",
             "icon": "https://cdn.assistantapps.com/icon/assistantNMS.webp",
+            "screenshot": "/assets/img/screenshot-assistantNMS.png",
             "description": "The first of the Assistant apps! This app was relased on the 12th of August 2019 and reached 40 000 active users on Android 1 year later. The app is available on Android, iOS and a simplified version is available for Web",
             "documentation": "https://docs.assistantapps.com/#/apps/nms-main",
             "links": [
                 {
                     "title": "Apple App Store",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://apps.apple.com/us/app/id1480287625"
                 },
                 {
                     "title": "Web App",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://app.nmsassistant.com"
                 },
                 {
                     "title": "Google Play Store",
-                    "class": "special fit",
+                    "icon": "googlePlay",
                     "url": "https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes"
                 },
                 {
                     "title": "Homepage",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://nmsassistant.com"
+                },
+                {
+                    "title": "Windows",
+                    "icon": "windows",
+                    "url": "https://apps.microsoft.com/store/detail/assistant-for-no-mans-sky/9NQLF7XD0LF3"
+                },
+                {
+                    "title": "Github",
+                    "icon": "github",
+                    "url": "https://github.com/AssistantNMS"
                 }
             ]
         },
@@ -102,27 +113,28 @@
             "link": "https://scrapassistant.com",
             "image": "https://cdn.assistantapps.com/assistantSMS.webp",
             "icon": "https://cdn.assistantapps.com/icon/assistantSMS.webp",
+            "screenshot": "/assets/img/screenshot-assistantNMS.png",
             "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
             "documentation": "https://docs.assistantapps.com/#/apps/sms-main",
             "links": [
                 {
                     "title": "Apple App Store",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://apps.apple.com/us/app/id1519215611"
                 },
                 {
                     "title": "Web",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://scrapassistant.com"
                 },
                 {
                     "title": "Google Play Store",
-                    "class": "special fit",
+                    "icon": "googlePlay",
                     "url": "https://play.google.com/store/apps/details?id=com.kurtlourens.scrap_mechanic"
                 },
                 {
                     "title": "Github",
-                    "class": "special fit",
+                    "icon": "github",
                     "url": "https://github.com/AssistantSMS"
                 }
             ]
@@ -136,17 +148,18 @@
             "link": "https://kronosguides.app",
             "image": "https://cdn.assistantapps.com/kronos.jpg",
             "icon": "https://cdn.assistantapps.com/icon/kronos.jpg",
+            "screenshot": "/assets/img/screenshot-assistantNMS.png",
             "description": "Do you play Zombies? Tired of having to search for guides when playing? Let this app do the work for you! Join the community of over 50,000 to stay up-to-date with the latest Zombies Easter Eggs with Kronos - the zombies companion!",
             "documentation": "https://docs.assistantapps.com/#/apps/kgz-main",
             "links": [
                 {
                     "title": "Apple App Store",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://apps.apple.com/us/app/id1438078478"
                 },
                 {
                     "title": "Google Play Store",
-                    "class": "special fit",
+                    "icon": "googlePlay",
                     "url": "https://play.google.com/store/apps/details?id=companion.kronosflutter"
                 }
             ]
@@ -160,22 +173,23 @@
             "link": "https://theforestmap.app",
             "image": "https://cdn.assistantapps.com/forest.png",
             "icon": "https://cdn.assistantapps.com/icon/forest.jpg",
+            "screenshot": "/assets/img/screenshot-assistantNMS.png",
             "description": "Do you play The Forest? Tired of searching for item locations while playing? Companion of the Forest is an interactive Forest Map that shows you where items in the game are. Whether you're a new or returning player, this app's got you covered with locations of items from the original Forest and it's sequel, Sons of the Forest!",
             "documentation": "https://docs.assistantapps.com/#/apps/kgz-main",
             "links": [
                 {
                     "title": "Apple App Store",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://apps.apple.com/us/app/companion-of-the-forest/id1576018666"
                 },
                 {
                     "title": "Google Play Store",
-                    "class": "special fit",
+                    "icon": "googlePlay",
                     "url": "https://play.google.com/store/apps/details?id=companion.sotf"
                 },
                 {
                     "title": "Web",
-                    "class": "special fit",
+                    "icon": "apple",
                     "url": "https://theforestmap.app"
                 }
             ]
