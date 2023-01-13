@@ -36,7 +36,7 @@ $storeIconSize: 35px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 1em;
-        row-gap: 2em;
+        row-gap: 3em;
 
         .wrapper.spotlight .inner {
             display: flex;
@@ -66,6 +66,14 @@ $storeIconSize: 35px;
                     .font-weight-heavy {
                         color: _palette(primary);
                     }
+                }
+
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    transition: all 1s ease-in-out;
                 }
 
                 .store-icon {

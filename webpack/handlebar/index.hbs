@@ -183,11 +183,11 @@
         <header id="header" class="alt">
             <label id="menu-toggle" for="toggle">Menu</label>
             <input type="checkbox" id="toggle">
-            <nav id="menu">
+            <label id="menu" class="noselect" for="toggle">
                 <div class="menu-inner">
                     <ul class="links">
-                        <li><a href="/" title="Home">Home</a></li>
-                        <li><a href="{{urlref link.tools}}" title="Translation Tool">Translation Tool</a></li>
+                        <li><a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a></li>
                         <li>
                             <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
                                 rel="noopener noreferrer">{{kurt.name}}</a>
@@ -201,9 +201,9 @@
                         {{/unless}}
                         {{/each}}
                     </ul>
-                    <a href="#" class="close" title="close">Close</a>
+                    <label id="menu-toggle-close" for="toggle">X</label>
                 </div>
-            </nav>
+            </label>
         </header>
         <section id="banner">
             <div class="inner">
@@ -242,7 +242,7 @@
         </section>
 
         <section id="wrapper">
-            <h2 class="mb-1">Our Assistants:</h2>
+            <h2 class="mb-1">Our Assistants</h2>
 
             <div class="features">
                 {{#each assistantApps}}
@@ -294,6 +294,8 @@
             </div>
         </section>
 
+        <hr />
+
         <section id="footer">
             <div class="important">
                 <span>&copy; {{meta.appName}}. All rights reserved.</span>
@@ -321,6 +323,8 @@
         </section>
 
     </div>
+
+    <div class="bg"></div>
 
     <!-- Scripts -->
     <script src="/dist/bundle.js"></script>

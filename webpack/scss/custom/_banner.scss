@@ -1,5 +1,5 @@
 #page-wrapper #banner {
-    @include padding(4.75em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
+    @include padding(6em, 0, (0, 0, _size(wrapper-edges, large) * -0.5, 0));
 
     .inner {
         margin: 0 auto;
@@ -10,7 +10,8 @@
         }
     }
 
-    .screenshot-stack {
+    .screenshot-stack,
+    .scroll-down-arrows {
         @include vendor("transition", ("opacity 0.5s ease", "transform 0.5s ease", "filter 0.25s ease"));
         @include vendor("transform", "translateX(0)");
         @include vendor("transition-delay", "0.65s");
@@ -88,7 +89,8 @@
             opacity: 0;
         }
 
-        .screenshot-stack {
+        .screenshot-stack,
+        .scroll-down-arrows {
             opacity: 0;
             @include vendor("transform", "translateX(0.25em)");
             @include vendor("filter", "blur(2px)");

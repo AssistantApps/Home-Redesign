@@ -209,9 +209,9 @@
                 "ratingValue": "5"
             },
             "inLanguage": "en",
-            "dateCreated": "2023-01-12",
-            "dateModified": "2023-01-12",
-            "datePublished": "2023-01-12"
+            "dateCreated": "2023-01-13",
+            "dateModified": "2023-01-13",
+            "datePublished": "2023-01-13"
         }
     </script>
 </head>
@@ -221,11 +221,11 @@
         <header id="header" class="alt">
             <label id="menu-toggle" for="toggle">Menu</label>
             <input type="checkbox" id="toggle">
-            <nav id="menu">
+            <label id="menu" class="noselect" for="toggle">
                 <div class="menu-inner">
                     <ul class="links">
-                        <li><a href="/" title="Home">Home</a></li>
-                        <li><a href="https://tools.assistantapps.com?ref&#x3D;AssistantApps" title="Translation Tool">Translation Tool</a></li>
+                        <li><a href="https://tools.assistantapps.com?ref&#x3D;AssistantApps" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a></li>
                         <li>
                             <a href="https://kurtlourens.com?ref&#x3D;AssistantApps" title="Kurt Lourens" target="_blank"
                                 rel="noopener noreferrer">Kurt Lourens</a>
@@ -247,9 +247,9 @@
                                 rel="noopener noreferrer">Companion of the Forest</a>
                         </li>
                     </ul>
-                    <a href="#" class="close" title="close">Close</a>
+                    <label id="menu-toggle-close" for="toggle">X</label>
                 </div>
-            </nav>
+            </label>
         </header>
         <section id="banner">
             <div class="inner">
@@ -288,7 +288,7 @@
         </section>
 
         <section id="wrapper">
-            <h2 class="mb-1">Our Assistants:</h2>
+            <h2 class="mb-1">Our Assistants</h2>
 
             <div class="features">
                 <section class="wrapper spotlight style1">
@@ -463,6 +463,8 @@
             </div>
         </section>
 
+        <hr />
+
         <section id="footer">
             <div class="important">
                 <span>&copy; Assistant Apps. All rights reserved.</span>
@@ -500,6 +502,8 @@
         </section>
 
     </div>
+
+    <div class="bg"></div>
 
     <!-- Scripts -->
     <script src="/dist/bundle.js"></script>
