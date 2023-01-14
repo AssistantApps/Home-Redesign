@@ -5,7 +5,7 @@
         margin: 0 auto;
         width: _size(inner);
 
-        > .row {
+        >.row {
             min-height: 560px;
         }
     }
@@ -72,14 +72,6 @@
             .icon {
                 font-size: 1.5em;
             }
-        }
-
-        h2 {
-            font-size: 1.5em;
-        }
-
-        p {
-            font-size: 0.8em;
         }
     }
 
