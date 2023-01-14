@@ -1,4 +1,4 @@
-#contactus {
+#footer {
     margin: 0 auto;
     width: _size(inner);
     text-align: center;
@@ -11,10 +11,11 @@
         background-color: _palette(primary);
         font-size: 0.7em;
         border-radius: 15px;
+        min-width: 200px;
     }
 }
 
-#footer {
+#footer-bottom {
     display: flex;
     margin: 0 auto;
     font-size: 0.75em;
@@ -32,6 +33,7 @@
     .icons,
     .important {
         display: flex;
+
         a {
             text-decoration: none;
             border: none;
