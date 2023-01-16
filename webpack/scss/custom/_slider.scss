@@ -19,7 +19,7 @@ $appIconSize: 50px;
     }
 }
 
-#banner>.inner .apps-end-word-slider {
+#banner > .inner .apps-end-word-slider {
     @include breakpoint("<medium") {
         display: block;
     }
@@ -201,6 +201,15 @@ $appIconSize: 50px;
         left: 45%;
         transform: rotate(12deg);
         z-index: 1;
+    }
+}
+
+@supports (-moz-appearance: none) {
+    .screenshot-stack {
+        margin-left: 2em;
+        .apps-screenshot .screenshot-inner {
+            height: unset;
+        }
     }
 }
 
