@@ -234,12 +234,6 @@
             "url": "https://assistantapps.com/github",
             "class": "icon-github",
             "alt": "Github"
-        },
-        {
-            "title": "KhaozTopsy Github",
-            "url": "https://github.com/Khaoz-Topsy",
-            "class": "icon-github",
-            "alt": "Github"
         }
     ],
     "features": [
