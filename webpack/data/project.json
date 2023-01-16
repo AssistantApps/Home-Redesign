@@ -114,8 +114,8 @@
             "link": "https://scrapassistant.com",
             "image": "https://cdn.assistantapps.com/assistantSMS.webp",
             "icon": "https://cdn.assistantapps.com/icon/assistantSMS.webp",
-            "screenshotLeft": "/assets/img/screenshot-assistantNMS1.png",
-            "screenshotRight": "/assets/img/screenshot-assistantNMS2.png",
+            "screenshotLeft": "/assets/img/screenshot-assistantSMS1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantSMS2.png",
             "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
             "documentation": "https://docs.assistantapps.com/#/apps/sms-main",
             "links": [
