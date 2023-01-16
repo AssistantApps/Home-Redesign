@@ -15,3 +15,8 @@
 
 <script defer src="./assets/js/analytics.js"></script>
 <script defer src="./dist/bundle.js?v={{version}}"></script>
+
+<script defer>
+    const bodyElem = document.getElementsByTagName('body');
+    bodyElem?.[0]?.classList?.remove?.('is-preload');
+</script>

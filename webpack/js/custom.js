@@ -19,7 +19,6 @@ $(function () {
     }
 
     setTimeout(() => {
-        debugger;
         customOnLoad?.();
     }, 250);
 

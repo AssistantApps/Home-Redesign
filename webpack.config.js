@@ -13,7 +13,6 @@ module.exports = (env, argv) => {
     return {
         mode: argv.mode === "production" ? "production" : "development",
         entry: [
-            './webpack/js/main.js',
             './webpack/js/custom.js',
         ],
         output: {

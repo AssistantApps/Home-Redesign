@@ -5,7 +5,7 @@
         margin: 0 auto;
         width: _size(inner);
 
-        >.row {
+        > .row {
             min-height: 560px;
         }
     }
@@ -46,8 +46,9 @@
         // text-transform: uppercase;
     }
 
-    .star {
+    .star-parallax {
         @include vendor("transition", ("opacity 1.5s ease"));
+        @include vendor("transition-delay", "0.8s");
     }
 
     @include breakpoint("<=large") {
@@ -104,7 +105,7 @@
             @include vendor("filter", "blur(2px)");
         }
 
-        .star {
+        .star-parallax {
             opacity: 0;
         }
     }
