@@ -46,6 +46,10 @@
         // text-transform: uppercase;
     }
 
+    .star {
+        @include vendor("transition", ("opacity 1.5s ease"));
+    }
+
     @include breakpoint("<=large") {
         @include padding(7em, 0, (0, 0, _size(wrapper-edges, large) * 0.5, 0));
         margin-bottom: (_size(wrapper-edges, large) * -1);
@@ -106,6 +110,10 @@
             opacity: 0;
             @include vendor("transform", "translateX(0.5em)");
             @include vendor("filter", "blur(2px)");
+        }
+
+        .star {
+            opacity: 0;
         }
     }
 }

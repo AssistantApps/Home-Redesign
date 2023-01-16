@@ -1,8 +1,29 @@
 import * as $ from './jquery.min.js';
 
 $(function () {
-    function formPostResult(data) {
+    function starsParallax() {
+        const starsParallaxElems = document.getElementsByClassName('star-parallax');
+        const starsParallaxInstances = [];
+        for (const starsParallaxElem of starsParallaxElems) {
+            starsParallaxInstances.push(new Parallax(starsParallaxElem));
+        }
+    }
+
+    function customOnLoad() {
+        try {
+            if ((screen?.width ?? 0) > 1000) {
+                var s = skrollr.init(); // global skrollr instance
+                starsParallax();
+            }
+        } catch { }
+    }
+
+    setTimeout(() => {
         debugger;
+        customOnLoad?.();
+    }, 250);
+
+    function formPostResult(data) {
         if (data.status == 200) {
             $('form#contact-form').hide();
             $('#success_message').show();

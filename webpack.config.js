@@ -51,6 +51,7 @@ module.exports = (env, argv) => {
                     date: require("./webpack/handlebar/helpers/date.helper"),
                     version: require("./webpack/handlebar/helpers/version.helper"),
                     urlrefescaped: require("./webpack/handlebar/helpers/urlrefescaped.helper"),
+                    times: require("./webpack/handlebar/helpers/times.helper"),
                 },
 
                 // hooks
