@@ -5,7 +5,7 @@
         margin: 0 auto;
         width: _size(inner);
 
-        >.row {
+        > .row {
             min-height: 560px;
         }
     }
@@ -44,6 +44,11 @@
         letter-spacing: _font(kern-heading);
         line-height: 2;
         // text-transform: uppercase;
+    }
+
+    .star-parallax {
+        @include vendor("transition", ("opacity 1.5s ease"));
+        @include vendor("transition-delay", "0.8s");
     }
 
     @include breakpoint("<=large") {
@@ -98,6 +103,10 @@
             opacity: 0;
             @include vendor("transform", "translateX(0.5em)");
             @include vendor("filter", "blur(2px)");
+        }
+
+        .star-parallax {
+            opacity: 0;
         }
     }
 }
