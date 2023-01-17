@@ -5,7 +5,7 @@
   "author": "Kurt Lourens",
   "scripts": {
     "build": "npm-run-all --sequential javascript:* sass:*",
-    "javascript:main": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
+    "javascript:main": "webpack --progress --profile --mode production",
     "javascript:metapages": "node ./webpack/node/generateAppPages.js",
     "sass:main": "sass webpack/scss/main.scss assets/css/main.css",
     "sass:noscript": "sass webpack/scss/noscript.scss assets/css/noscript.css",

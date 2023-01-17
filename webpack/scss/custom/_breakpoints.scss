@@ -22,10 +22,6 @@ body {
             .inner {
                 .banner-screenshot-stack {
                     padding-left: 5em;
-
-                    .apps-screenshot:nth-child(2) {
-                        top: -5%;
-                    }
                 }
             }
         }
@@ -37,7 +33,7 @@ body {
             width: unset;
         }
 
-        #page-wrapper > #banner {
+        #page-wrapper>#banner {
             margin-bottom: 0;
             padding-bottom: 4em;
 
@@ -48,7 +44,7 @@ body {
 
         #page-wrapper #banner {
             .inner {
-                > .row {
+                >.row {
                     min-height: unset;
                 }
 
@@ -151,10 +147,15 @@ body {
                         border-radius: 2em;
                         overflow: hidden;
 
+                        .screenshot-inner:before {
+                            display: none;
+                        }
+
                         .apps-screenshot:nth-child(1),
                         .apps-screenshot:nth-child(2) {
                             height: 60vh;
                             padding-top: 0;
+                            filter: unset;
                         }
 
                         .apps-screenshot:nth-child(1) {
@@ -172,7 +173,7 @@ body {
         #wrapper,
         #wrapper-work .inner,
         #footer .inner {
-            > h2 {
+            >h2 {
                 font-size: 2rem;
                 text-align: center;
             }
@@ -196,7 +197,7 @@ body {
     }
 
     @include breakpoint("<=xsmall") {
-        #page-wrapper > #banner {
+        #page-wrapper>#banner {
             padding-bottom: 6em;
         }
     }

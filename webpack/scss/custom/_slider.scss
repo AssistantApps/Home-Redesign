@@ -19,7 +19,7 @@ $appIconSize: 50px;
     }
 }
 
-#banner > .inner .apps-end-word-slider {
+#banner>.inner .apps-end-word-slider {
     @include breakpoint("<medium") {
         display: block;
     }
@@ -137,17 +137,34 @@ $appIconSize: 50px;
     }
 }
 
+body.is-preload .screenshot-stack .apps-screenshot {
+    transition-duration: 10ms;
+}
+
 .screenshot-stack {
     height: 100%;
 
     .apps-screenshot {
-        width: 100%;
         height: 100%;
+        transition: all 1s ease-in-out;
 
         .screenshot-inner {
             position: relative;
             display: inline-block;
             height: 100%;
+
+            &:before {
+                content: " ";
+                display: inline-block;
+                position: absolute;
+                top: 8px;
+                left: -8px;
+                height: 100%;
+                width: 100%;
+                background-image: url(/assets/img/phone-bg.png);
+                background-size: cover;
+                z-index: -1;
+            }
 
             .apps-left-screenshot-slider-bg,
             .apps-left-screenshot-slider,
@@ -170,9 +187,13 @@ $appIconSize: 50px;
                 z-index: -3;
             }
 
-            img {
+            img.screenshot-frame {
                 height: 100%;
             }
+        }
+
+        &:nth-child(2) .screenshot-inner:before {
+            left: 8px;
         }
     }
 
@@ -189,24 +210,39 @@ $appIconSize: 50px;
 
     .apps-screenshot:nth-child(1) {
         position: absolute;
-        top: -10%;
+        top: 0;
         left: 10%;
         transform: rotate(-22deg);
         z-index: 2;
+        filter: drop-shadow(-5px 5px 16px #333);
     }
 
     .apps-screenshot:nth-child(2) {
         position: absolute;
-        top: 10%;
+        top: 5%;
         left: 45%;
         transform: rotate(12deg);
         z-index: 1;
+        filter: drop-shadow(5px 5px 16px #333);
+    }
+
+    &:hover {
+        .apps-screenshot:nth-child(1) {
+            transform: rotate(-16deg);
+            filter: drop-shadow(5px 5px 16px #999);
+        }
+
+        .apps-screenshot:nth-child(2) {
+            transform: rotate(18deg);
+            filter: drop-shadow(-5px 5px 16px #999);
+        }
     }
 }
 
 @supports (-moz-appearance: none) {
     .screenshot-stack {
         margin-left: 2em;
+
         .apps-screenshot .screenshot-inner {
             height: unset;
         }
