@@ -74,7 +74,7 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
 
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css?v={{version}}" />
 
     {{#each preconnect}}
     <link rel="preconnect" href="{{this}}">
@@ -217,14 +217,34 @@
 
                         <div class="scroll-down-arrows"><span></span><span></span><span></span></div>
                     </div>
+
                     <div class="banner-screenshot-stack col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="star-parallax">
+                            <div data-depth="0.05" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.75" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.33" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.25" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.05" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                        </div>
+
                         <div class="screenshot-stack">
                             <div class="apps-screenshot">
                                 <div class="screenshot-inner">
                                     <div class="apps-left-screenshot-slider-bg"></div>
                                     <div class="assistantapps-logo"></div>
                                     <div class="apps-left-screenshot-slider"></div>
-                                    <img src="/assets/img/screenshot-frame.png" alt="phone frame" />
+                                    <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
+                                        alt="phone frame" />
                                 </div>
                             </div>
                             <div class="apps-screenshot">
@@ -232,7 +252,8 @@
                                     <div class="apps-left-screenshot-slider-bg"></div>
                                     <div class="assistantapps-logo"></div>
                                     <div class="apps-right-screenshot-slider"></div>
-                                    <img src="/assets/img/screenshot-frame.png" alt="phone frame" />
+                                    <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
+                                        alt="phone frame" />
                                 </div>
                             </div>
                         </div>
@@ -327,9 +348,7 @@
 
     <div class="bg"></div>
 
-    <!-- Scripts -->
-    <script src="/dist/bundle.js"></script>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    {{> components/scripts parallax="true" hcaptcha="true"}}
 </body>
 
 </html>

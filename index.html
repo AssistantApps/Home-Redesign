@@ -74,7 +74,7 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="msapplication-TileColor" content="#2b5797">
 
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1.0" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://cdn.assistantapps.com">
@@ -209,9 +209,9 @@
                 "ratingValue": "5"
             },
             "inLanguage": "en",
-            "dateCreated": "2023-01-14",
-            "dateModified": "2023-01-14",
-            "datePublished": "2023-01-14"
+            "dateCreated": "2023-01-16",
+            "dateModified": "2023-01-16",
+            "datePublished": "2023-01-16"
         }
     </script>
 </head>
@@ -263,14 +263,34 @@
 
                         <div class="scroll-down-arrows"><span></span><span></span><span></span></div>
                     </div>
+
                     <div class="banner-screenshot-stack col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="star-parallax">
+                            <div data-depth="0.05" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.75" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.33" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.25" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                            <div data-depth="0.05" class="star-container">
+                                <div class="star four-pointed-star"></div>
+                            </div>
+                        </div>
+
                         <div class="screenshot-stack">
                             <div class="apps-screenshot">
                                 <div class="screenshot-inner">
                                     <div class="apps-left-screenshot-slider-bg"></div>
                                     <div class="assistantapps-logo"></div>
                                     <div class="apps-left-screenshot-slider"></div>
-                                    <img src="/assets/img/screenshot-frame.png" alt="phone frame" />
+                                    <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
+                                        alt="phone frame" />
                                 </div>
                             </div>
                             <div class="apps-screenshot">
@@ -278,7 +298,8 @@
                                     <div class="apps-left-screenshot-slider-bg"></div>
                                     <div class="assistantapps-logo"></div>
                                     <div class="apps-right-screenshot-slider"></div>
-                                    <img src="/assets/img/screenshot-frame.png" alt="phone frame" />
+                                    <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
+                                        alt="phone frame" />
                                 </div>
                             </div>
                         </div>
@@ -496,9 +517,6 @@
                 <a href="https://assistantapps.com/github?ref&#x3D;AssistantApps" title="Github" target="_blank" rel="noopener noreferrer">
                     <span class="icon-github"></span>
                 </a>
-                <a href="https://github.com/Khaoz-Topsy?ref&#x3D;AssistantApps" title="Github" target="_blank" rel="noopener noreferrer">
-                    <span class="icon-github"></span>
-                </a>
             </div>
         </section>
 
@@ -506,9 +524,20 @@
 
     <div class="bg"></div>
 
-    <!-- Scripts -->
-    <script src="/dist/bundle.js"></script>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-</body>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script async src="./assets/js/skrollr.min.js"></script>
+    
+    
+    <script async defer src="https://js.hcaptcha.com/1/api.js"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TSB514DX5T"></script>
+    
+    <script defer src="./assets/js/analytics.js"></script>
+    <script defer src="./dist/bundle.js?v=1.1.0"></script>
+    
+    <script defer>
+        const bodyElem = document.getElementsByTagName('body');
+        bodyElem?.[0]?.classList?.remove?.('is-preload');
+    </script></body>
 
 </html>

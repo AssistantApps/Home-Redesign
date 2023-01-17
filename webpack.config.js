@@ -13,7 +13,6 @@ module.exports = (env, argv) => {
     return {
         mode: argv.mode === "production" ? "production" : "development",
         entry: [
-            './webpack/js/main.js',
             './webpack/js/custom.js',
         ],
         output: {
@@ -51,6 +50,7 @@ module.exports = (env, argv) => {
                     date: require("./webpack/handlebar/helpers/date.helper"),
                     version: require("./webpack/handlebar/helpers/version.helper"),
                     urlrefescaped: require("./webpack/handlebar/helpers/urlrefescaped.helper"),
+                    times: require("./webpack/handlebar/helpers/times.helper"),
                 },
 
                 // hooks
