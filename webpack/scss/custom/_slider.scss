@@ -165,7 +165,7 @@ $appIconSize: 50px;
 
             .apps-left-screenshot-slider-bg {
                 background-color: _palette(bg);
-                height: calc(100% - 1em);
+                height: 100%;
                 border-radius: 2em;
                 z-index: -3;
             }
