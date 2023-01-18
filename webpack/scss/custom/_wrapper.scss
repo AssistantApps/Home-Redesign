@@ -64,7 +64,7 @@ $storeIconSize: 35px;
                     margin-bottom: 0;
 
                     .font-weight-heavy {
-                        color: _palette(primary);
+                        color: var(--primary-text-colour);
                     }
                 }
 
@@ -141,8 +141,8 @@ $storeIconSize: 35px;
                     a {
                         display: inline;
                         margin: 0 1em;
-                        color: _palette(primary);
-                        border-bottom: 1px solid _palette(primary);
+                        color: var(--primary-text-colour);
+                        border-bottom: 1px solid var(--primary-text-colour);
                     }
                 }
             }

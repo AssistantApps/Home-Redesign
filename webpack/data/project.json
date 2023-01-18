@@ -10,7 +10,8 @@
     },
     "link": {
         "tools": "https://tools.assistantapps.com",
-        "discord": "https://assistantapps.com/discord"
+        "discord": "https://assistantapps.com/discord",
+        "documentation": "https://docs.assistantapps.com"
     },
     "theme": {
         "colour": "#4285f4",
@@ -27,12 +28,14 @@
     "footer": "Get in touch",
     "footerDescription": "Feel free to get in contact with us! we have a Discord server if you would like to talk directly to us. Otherwise you can use the form below and we will get back to you as soon as we can.",
     "twitter": {
-        "handle": "@AssistantNMS",
+        "handle": "@AssistantApps",
+        "url": "https://twitter.com/AssistantApps",
         "imageAlt": "Logo of the Assistant Apps",
         "metaImageSize": "summary_large_image"
     },
     "preconnect": [
         "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com",
         "https://cdn.assistantapps.com"
     ],
     "images": {
@@ -72,6 +75,13 @@
             "screenshotRight": "/assets/img/screenshot-assistantNMS2.png",
             "description": "The first of the Assistant apps! This app was relased on the 12th of August 2019 and reached 40 000 active users on Android 1 year later. The app is available on Android, iOS and a simplified version is available for Web",
             "documentation": "https://docs.assistantapps.com/#/apps/nms-main",
+            "downloadAppLink": "https://play.google.com/store/apps/details?id=com.kurtlourens.no_mans_sky_recipes",
+            "customPrimaryColour": "#7986cb",
+            "twitter": {
+                "handle": "@AssistantNMS",
+                "url": "https://twitter.com/AssistantNMS",
+                "imageAlt": "Logo of the AssistantNMS"
+            },
             "links": [
                 {
                     "title": "Apple App Store",
@@ -118,6 +128,7 @@
             "screenshotRight": "/assets/img/screenshot-assistantSMS2.png",
             "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
             "documentation": "https://docs.assistantapps.com/#/apps/sms-main",
+            "customPrimaryColour": "#F2931F",
             "links": [
                 {
                     "title": "Apple App Store",
@@ -180,6 +191,7 @@
             "screenshotRight": "/assets/img/screenshot-assistantFOR2.png",
             "description": "Do you play The Forest? Tired of searching for item locations while playing? Companion of the Forest is an interactive Forest Map that shows you where items in the game are. Whether you're a new or returning player, this app's got you covered with locations of items from the original Forest and it's sequel, Sons of the Forest!",
             "documentation": "https://docs.assistantapps.com/#/apps/kgz-main",
+            "customPrimaryColour": "#CAB735",
             "links": [
                 {
                     "title": "Apple App Store",
