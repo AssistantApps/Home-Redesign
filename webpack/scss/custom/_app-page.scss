@@ -99,6 +99,15 @@ body.app-specific {
             .banner-screenshot-stack {
                 padding-left: 3em;
 
+                .star-parallax .star-container {
+                    &:nth-child(3) .four-pointed-star {
+                        left: 10%;
+                    }
+                    &:nth-child(4) .four-pointed-star {
+                        left: 100%;
+                    }
+                }
+
                 img.screenshotLeft,
                 img.screenshotRight {
                     position: absolute;
