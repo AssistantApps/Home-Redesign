@@ -6,7 +6,38 @@
         width: _size(inner);
 
         > .row {
+            position: relative;
             min-height: 560px;
+
+            .animation-paused-icon {
+                position: absolute;
+                top: -3em;
+                left: 50%;
+                width: 4em;
+                height: 4em;
+                transform: translate(-50%, -50%);
+                transition: all 500ms ease-in-out;
+                opacity: 0;
+            }
+
+            &:hover {
+                .animation-paused-icon {
+                    top: -3em;
+                    opacity: 0.5;
+                }
+                .apps-start-word-slider:after {
+                    animation-play-state: paused;
+                }
+                .apps-end-word-slider:after {
+                    animation-play-state: paused;
+                }
+                .apps-left-screenshot-slider {
+                    animation-play-state: paused;
+                }
+                .apps-right-screenshot-slider {
+                    animation-play-state: paused;
+                }
+            }
         }
     }
 
