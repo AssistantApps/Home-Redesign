@@ -6,11 +6,12 @@ Header add X-WebKit-CSP: "default-src 'none'; script-src 'self' 'report-sample' 
 Header add Set-Cookie: "cross-site-cookie=name; SameSite=None; Secure"
 Header add X-Clacks-Overhead: "GNU Terry Pratchett, Eddison the Magic Doggo"
 Header add Clacks-Overhead: "GNU Terry Pratchett, Eddison the Magic Doggo"
-Header add X-Powered-by: "Magic &amp; the Distraction Squad"
+Header add X-Powered-by: "Magic & the Distraction Squad"
 
 
 RewriteRule ^discord/(.*)$ https://discord.gg/q3aFBQM?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^github/(.*)$ https://github.com/AssistantApps?ref=AssistantApps [R=301,NC,L]
+RewriteRule ^patreon/(.*)$ https://patreon.com/AssistantApps?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^support/(.*)$ https://assistantapps.freshdesk.com?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^nms-roadmap/(.*)$ https://github.com/orgs/AssistantNMS/projects/3/views/4?ref=AssistantApps [R=301,NC,L]
 RewriteRule ^kurt/(.*)$ https://kurtlourens.com?ref=AssistantApps [R=301,NC,L]
