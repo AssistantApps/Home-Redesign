@@ -16,7 +16,7 @@
 <script defer src="/assets/js/analytics.js"></script>
 <script defer src="/dist/bundle.js?v={{version}}"></script>
 
-<script defer>
+<script defer nonce="is-preload-handler">
     const bodyElem = document.getElementsByTagName('body');
     bodyElem?.[0]?.classList?.remove?.('is-preload');
 </script>

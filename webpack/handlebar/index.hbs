@@ -96,14 +96,16 @@
 
 <body class="is-preload">
     <div id="page-wrapper" class="bootstrap-wrapper">
-        <header id="header" class="alt">
+        <header id="header" class="noselect alt">
             <label id="menu-toggle" for="toggle">Menu</label>
             <input type="checkbox" id="toggle">
             <label id="menu" class="noselect" for="toggle">
                 <div class="menu-inner">
                     <ul class="links">
-                        <li><a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
-                                rel="noopener noreferrer">Translation Tool</a></li>
+                        <li>
+                            <a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a>
+                        </li>
                         <li>
                             <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
                                 rel="noopener noreferrer">{{kurt.name}}</a>
@@ -121,63 +123,8 @@
                 </div>
             </label>
         </header>
-        <section id="banner">
-            <div class="inner">
-                <div class="row">
-                    <div class="banner-text col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <h2 class="font-weight-light">
-                            <span class="apps-start-word-slider font-weight-light"></span><br />
-                            <span class="apps-end-word-slider font-weight-heavy"></span>
-                        </h2>
-                        <p>{{subtitle}}</p>
 
-                        <div class="scroll-down-arrows"><span></span><span></span><span></span></div>
-                    </div>
-
-                    <div class="banner-screenshot-stack col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <div class="star-parallax">
-                            <div data-depth="0.05" class="star-container">
-                                <div class="star four-pointed-star"></div>
-                            </div>
-                            <div data-depth="0.75" class="star-container">
-                                <div class="star four-pointed-star"></div>
-                            </div>
-                            <div data-depth="0.33" class="star-container">
-                                <div class="star four-pointed-star"></div>
-                            </div>
-                            <div data-depth="0.25" class="star-container">
-                                <div class="star four-pointed-star"></div>
-                            </div>
-                            <div data-depth="0.05" class="star-container">
-                                <div class="star four-pointed-star"></div>
-                            </div>
-                        </div>
-
-                        <div class="screenshot-stack">
-                            <div class="apps-screenshot">
-                                <div class="screenshot-inner">
-                                    <div class="apps-left-screenshot-slider-bg"></div>
-                                    <div class="assistantapps-logo"></div>
-                                    <div class="apps-left-screenshot-slider"></div>
-                                    <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
-                                        alt="phone frame" class="screenshot-frame" />
-                                </div>
-                            </div>
-                            <div class="apps-screenshot">
-                                <div class="screenshot-inner">
-                                    <div class="apps-left-screenshot-slider-bg"></div>
-                                    <div class="assistantapps-logo"></div>
-                                    <div class="apps-right-screenshot-slider"></div>
-                                    <img src="/assets/img/screenshot-frame.png" loading="lazy" draggable="false"
-                                        alt="phone frame" class="screenshot-frame" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="scroll-down-arrows"><span></span><span></span><span></span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {{> components/banner }}
 
         <section id="wrapper">
             <h2 class="mb-1">Our Assistants</h2>
@@ -203,7 +150,7 @@
         </section>
 
         <section id="footer">
-            <div class="inner">
+            <div class="inner noselect">
                 <h2>{{footer}}</h2>
                 <p class="mb-2">{{footerDescription}}</p>
                 <form id="contact_form">

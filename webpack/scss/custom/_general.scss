@@ -29,6 +29,10 @@ body::-webkit-scrollbar-thumb {
     );
 }
 
+::selection {
+    background-color: var(--primary-text-colour);
+}
+
 html {
     background-color: _palette(bg);
     position: relative;

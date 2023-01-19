@@ -30,6 +30,7 @@ async function generateOtherFiles() {
 
     Handlebars.registerPartial('components/documentHead', require('../handlebar/components/documentHead.hbs'));
     Handlebars.registerPartial('components/background', require('../handlebar/components/background.hbs'));
+    Handlebars.registerPartial('components/banner', require('../handlebar/components/banner.hbs'));
     Handlebars.registerPartial('components/footer', require('../handlebar/components/footer.hbs'));
     Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
 
@@ -38,6 +39,19 @@ async function generateOtherFiles() {
 
         const template = await readFile(`./webpack/handlebar/app.hbs`, 'utf8');
         const templateFunc = Handlebars.compile(template);
+
+        const otherLinks = [];
+        const storeBadges = [];
+        const storeLinksTypes = ['apple', 'googlePlay'];
+        for (const link of assApp.links) {
+            if (storeLinksTypes.includes(link.icon)) {
+                storeBadges.push(link);
+            }
+            else {
+                otherLinks.push(link);
+            }
+        }
+
         const templateData = {
             kurt: projectData.kurt,
             theme: projectData.theme,
@@ -54,7 +68,9 @@ async function generateOtherFiles() {
 
             documentTitle: assApp.name,
             rootUrl: assApp.link,
-            downloadApp: (assApp.downloadAppLink ?? assApp.links?.[0]?.url) ?? rootUrl,
+            downloadAppLink: (assApp.downloadAppLink ?? assApp.links?.[0]?.url) ?? assApp.link,
+            storeBadges: storeBadges,
+            otherLinks: otherLinks,
 
             ...assApp,
 
