@@ -30,6 +30,7 @@ async function generateOtherFiles() {
 
     Handlebars.registerPartial('components/documentHead', require('../handlebar/components/documentHead.hbs'));
     Handlebars.registerPartial('components/background', require('../handlebar/components/background.hbs'));
+    Handlebars.registerPartial('components/banner', require('../handlebar/components/banner.hbs'));
     Handlebars.registerPartial('components/footer', require('../handlebar/components/footer.hbs'));
     Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
 
