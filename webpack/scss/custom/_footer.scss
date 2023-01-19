@@ -1,5 +1,5 @@
 #footer {
-    margin: 0 auto;
+    margin: 0 auto 4em auto;
     width: _size(inner);
     text-align: center;
 
@@ -8,10 +8,11 @@
     }
 
     ul.actions li input {
-        background-color: _palette(primary);
+        background-color: var(--primary-text-colour);
         font-size: 0.7em;
         border-radius: 15px;
         min-width: 200px;
+        margin-bottom: 4em;
     }
 }
 
@@ -43,7 +44,7 @@
     .important {
         a {
             &:hover {
-                color: _palette(primary) !important;
+                color: var(--primary-text-colour) !important;
             }
         }
     }
@@ -59,7 +60,7 @@
         background-color: _palette(textbg);
 
         &:hover {
-            background-color: _palette(primary);
+            background-color: var(--primary-text-colour);
         }
     }
 

@@ -10,6 +10,7 @@ const urlrefHelper = require('../handlebar/helpers/urlref.helper.js');
 const versionHelper = require('../handlebar/helpers/version.helper.js');
 const sectionClassHelper = require('../handlebar/helpers/sectionclass.helper.js');
 const urlrefescapedHelper = require('../handlebar/helpers/urlrefescaped.helper.js');
+const cssvarHelper = require('../handlebar/helpers/cssvar.helper.js');
 
 const readFile = util.promisify(fs.readFile);
 
@@ -24,6 +25,13 @@ async function generateOtherFiles() {
     Handlebars.registerHelper('version', versionHelper);
     Handlebars.registerHelper('sectionclass', sectionClassHelper);
     Handlebars.registerHelper('urlrefescaped', urlrefescapedHelper);
+    Handlebars.registerHelper('cssvar', cssvarHelper);
+
+
+    Handlebars.registerPartial('components/documentHead', require('../handlebar/components/documentHead.hbs'));
+    Handlebars.registerPartial('components/background', require('../handlebar/components/background.hbs'));
+    Handlebars.registerPartial('components/footer', require('../handlebar/components/footer.hbs'));
+    Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
 
     for (const assApp of projectData.assistantApps) {
         if (assApp.shortCode == null || assApp.shortCode.length < 2) continue;
@@ -35,8 +43,23 @@ async function generateOtherFiles() {
             theme: projectData.theme,
             meta: projectData.meta,
             rootLinks: projectData.link,
-            twitter: projectData.twitter,
-            ...assApp
+            twitter: {
+                ...projectData.twitter,
+                ...(assApp.link ?? {})
+            },
+            preconnect: [
+                ...projectData.preconnect,
+                assApp.image,
+            ],
+
+            documentTitle: assApp.name,
+            rootUrl: assApp.link,
+            downloadApp: (assApp.downloadAppLink ?? assApp.links?.[0]?.url) ?? rootUrl,
+
+            ...assApp,
+
+            assAppLinks: assApp.links,
+            links: projectData.links,
         };
         const compiledTemplate = templateFunc(templateData);
 

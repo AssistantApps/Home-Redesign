@@ -1,5 +1,5 @@
 #header {
-    margin: 0 auto;
+    margin: 0.25em auto 0 auto;
     width: 55em;
     height: 4em;
 }
@@ -11,7 +11,7 @@
 
     @include vendor("transition", "background-color #{_duration(transition)} ease-in-out");
     border-radius: _size(border-radius);
-    box-shadow: inset 0 0 0 2px _palette(primary);
+    box-shadow: inset 0 0 0 2px var(--primary-text-colour);
     padding: 0 1em;
     font-size: 1.25em;
 
@@ -76,7 +76,7 @@
                 background-color: rgba(0, 0, 0, 0.2);
 
                 a {
-                    color: _palette(primary) !important;
+                    color: var(--primary-text-colour) !important;
                 }
             }
         }
