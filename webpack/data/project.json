@@ -292,6 +292,10 @@
             "url": "https://github.com/AssistantApps"
         },
         {
+            "pattern": "patreon",
+            "url": "https://patreon.com/AssistantApps"
+        },
+        {
             "pattern": "support",
             "url": "https://assistantapps.freshdesk.com"
         },
