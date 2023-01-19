@@ -1,4 +1,5 @@
 $headerSize: 4em;
+$storeIconSize: 50px;
 
 body.app-specific {
     height: unset !important;
@@ -68,7 +69,7 @@ body.app-specific {
                 }
 
                 &:hover {
-                    transform: translateY(-50%) scale(120%);
+                    transform: translateY(-50%) scale(110%);
                 }
             }
         }
@@ -81,18 +82,24 @@ body.app-specific {
 
     #page-wrapper #banner {
         padding-top: 4em;
+        margin-bottom: 4em;
 
         .inner > .row {
             min-height: unset;
 
-            .banner-text p {
-                line-height: unset;
+            .banner-text {
+                h2 {
+                    margin-bottom: 0;
+                }
+                p {
+                    line-height: unset;
 
-                &.primary-text.font-weight-heavy {
-                    margin: 0;
-                    font-weight: 800;
-                    font-size: 0.75em;
-                    text-transform: uppercase;
+                    &.primary-text.font-weight-heavy {
+                        margin: 0;
+                        font-weight: 800;
+                        font-size: 0.75em;
+                        text-transform: uppercase;
+                    }
                 }
             }
 
@@ -117,6 +124,69 @@ body.app-specific {
                     bottom: 0;
                     height: 100%;
                     z-index: -1;
+                }
+            }
+        }
+
+        .store {
+            margin-top: 1em;
+
+            .store-list {
+                display: flex;
+                gap: 1em;
+
+                a.badge {
+                    border-bottom: unset;
+                    transition: transform 250ms ease-in-out;
+
+                    &:hover {
+                        transform: scale(105%);
+                    }
+
+                    img {
+                        max-width: 11em;
+                    }
+                }
+            }
+
+            .sublinks {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                margin-top: 0.5em;
+
+                .store-icon {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5em;
+                    border-radius: 8px;
+                    padding: 0.45em 0.75em;
+                    border: 1px solid #bdbdbd;
+                    transition: all 150ms ease-in-out;
+
+                    img {
+                        max-width: $storeIconSize;
+                        max-height: $storeIconSize;
+                    }
+
+                    &:hover {
+                        transform: scale(105%);
+
+                        img {
+                            transform: unset;
+                        }
+                    }
+
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        p {
+                            margin: 0;
+                            transition: none;
+                        }
+                    }
                 }
             }
         }

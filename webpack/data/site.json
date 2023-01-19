@@ -109,7 +109,7 @@
                     "url": "https://nmsassistant.com"
                 },
                 {
-                    "title": "Github",
+                    "title": "Github organisation",
                     "icon": "github",
                     "url": "https://github.com/AssistantNMS"
                 }
@@ -146,7 +146,7 @@
                     "url": "https://scrapassistant.com"
                 },
                 {
-                    "title": "Github",
+                    "title": "Github organisation",
                     "icon": "github",
                     "url": "https://github.com/AssistantSMS"
                 }
@@ -206,7 +206,40 @@
                 {
                     "title": "Web",
                     "icon": "webapp",
+                    "url": "https://app.theforestmap.app/"
+                },
+                {
+                    "title": "Homepage",
+                    "icon": "web",
                     "url": "https://theforestmap.app"
+                }
+            ]
+        },
+        {
+            "shortCode": "dkm",
+            "hiddenOnFrontPage": true,
+            "game": "Dinkum",
+            "title": "Assistant for Dinkum",
+            "titleStart": "Assistant for",
+            "titleEnd": "Dinkum",
+            "link": "https://dinkum.assistantapps.com",
+            "image": "https://cdn.assistantapps.com/assistantSMS.webp",
+            "icon": "https://cdn.assistantapps.com/icon/assistantSMS.webp",
+            "screenshotLeft": "/assets/img/screenshot-assistantSMS1.png",
+            "screenshotRight": "/assets/img/screenshot-assistantSMS2.png",
+            "description": "The Assistant for Scrap Mechanic app would not have been started if the developers of the game did not make it easy for modders to look at and edit the game's files. This made reading the game files a lot easier than No Man's Sky and helped in completing this project in a short period of time (2-3 weeks part time). This is also the first completely open source project.",
+            "documentation": "https://docs.assistantapps.com/#/apps/dkm-main",
+            "customPrimaryColour": "#8B432B",
+            "links": [
+                {
+                    "title": "Web",
+                    "icon": "webapp",
+                    "url": "https://dinkum.assistantapps.com"
+                },
+                {
+                    "title": "Github organisation",
+                    "icon": "github",
+                    "url": "https://github.com/AssistantDKM"
                 }
             ]
         },

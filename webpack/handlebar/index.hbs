@@ -96,14 +96,16 @@
 
 <body class="is-preload">
     <div id="page-wrapper" class="bootstrap-wrapper">
-        <header id="header" class="alt">
+        <header id="header" class="noselect alt">
             <label id="menu-toggle" for="toggle">Menu</label>
             <input type="checkbox" id="toggle">
             <label id="menu" class="noselect" for="toggle">
                 <div class="menu-inner">
                     <ul class="links">
-                        <li><a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
-                                rel="noopener noreferrer">Translation Tool</a></li>
+                        <li>
+                            <a href="{{urlref link.tools}}" title="Translation Tool" target="_blank"
+                                rel="noopener noreferrer">Translation Tool</a>
+                        </li>
                         <li>
                             <a href="{{urlref kurt.website}}" title="{{kurt.name}}" target="_blank"
                                 rel="noopener noreferrer">{{kurt.name}}</a>
@@ -148,7 +150,7 @@
         </section>
 
         <section id="footer">
-            <div class="inner">
+            <div class="inner noselect">
                 <h2>{{footer}}</h2>
                 <p class="mb-2">{{footerDescription}}</p>
                 <form id="contact_form">

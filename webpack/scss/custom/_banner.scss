@@ -79,6 +79,13 @@
         // text-transform: uppercase;
     }
 
+    .store {
+        @include vendor("transition", ("opacity 0.5s ease", "transform 0.5s ease", "filter 0.25s ease"));
+        @include vendor("transform", "translateX(0)");
+        @include vendor("transition-delay", "0.8s");
+        @include vendor("filter", "blur(0)");
+    }
+
     .star-parallax {
         @include vendor("transition", ("opacity 1.5s ease"));
         @include vendor("transition-delay", "0.8s");
@@ -135,6 +142,12 @@
         p {
             opacity: 0;
             @include vendor("transform", "translateX(0.5em)");
+            @include vendor("filter", "blur(2px)");
+        }
+
+        .store {
+            opacity: 0;
+            @include vendor("transform", "translateX(5em)");
             @include vendor("filter", "blur(2px)");
         }
 

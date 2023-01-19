@@ -11,7 +11,7 @@
                 <p>{{description}}</p>
                 {{else}}
                 <h2 class="font-weight-light">
-                    <span class="apps-start-word-slider font-weight-light"></span><br />
+                    <span class="apps-start-word-slider font-weight-light"></span><br class="noselect" />
                     <span class="apps-end-word-slider font-weight-heavy"></span>
                 </h2>
                 <p>{{subtitle}}</p>
@@ -19,7 +19,7 @@
                 {{/if}}
             </div>
 
-            <div class="banner-screenshot-stack col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="banner-screenshot-stack noselect col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="star-parallax">
                     <div data-depth="0.05" class="star-container">
                         <div class="star four-pointed-star"></div>
@@ -72,8 +72,12 @@
 
             {{#unless isAppSpecific}}
             <img src="/assets/img/animation-paused.svg" loading="lazy" draggable="false" alt="animation paused"
-                class="animation-paused-icon" />
+                class="noselect animation-paused-icon" />
             {{/unless}}
         </div>
+
+        {{#if @partial-block}}
+        {{> @partial-block }}
+        {{/if}}
     </div>
 </section>
