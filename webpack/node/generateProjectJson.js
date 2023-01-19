@@ -16,19 +16,32 @@ async function generateFullJson() {
 
     const cspContents = await readFile('./webpack/data/csp.json', 'utf8');
     const cspContent = JSON.parse(cspContents);
-    const headerList = cspContent.options.map(opt =>
-        opt.name +
-        ((opt.values != null && opt.values.length > 0) ? ' ' : '') +
-        opt.values.join(' ')
-    );
-    const header = headerList.join('; ') + ';';
+
+    const headerString = cspContent.options
+        .map(opt =>
+            opt.name +
+            ((opt.values != null && opt.values.length > 0) ? ' ' : '') +
+            opt.values.join(' ')
+        ).join('; ') + ';';
+
+    const htmlHeaderString = cspContent.options
+        .filter(hdr => hdr.hideInHtml !== true)
+        .map(opt =>
+            opt.name +
+            ((opt.values != null && opt.values.length > 0) ? ' ' : '') +
+            opt.values.join(' ')
+        ).join('; ') + ';';
 
     const siteDataFull = {
         ...siteData,
         ...liveData,
         headers: [
-            ...cspContent.headers.map(csp => ({ "name": csp, "value": header })),
+            ...cspContent.headers.map(csp => ({ "name": csp, "value": headerString })),
             ...siteData.headers,
+        ],
+        htmlHeaders: [
+            ...cspContent.headers.map(csp => ({ "name": csp, "value": htmlHeaderString })),
+            ...siteData.headers.filter(hdr => hdr.hideInHtml !== true),
         ]
     };
 

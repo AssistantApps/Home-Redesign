@@ -351,6 +351,7 @@
     ],
     "headers": [
         {
+            "hideInHtml": true,
             "name": "Set-Cookie",
             "value": "cross-site-cookie=name; SameSite=None; Secure"
         },

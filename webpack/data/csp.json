@@ -68,6 +68,7 @@
             ]
         },
         {
+            "hideInHtml": true,
             "name": "report-uri",
             "values": [
                 "'none'"
@@ -80,6 +81,7 @@
             ]
         },
         {
+            "hideInHtml": true,
             "name": "frame-ancestors",
             "values": [
                 "'none'"
