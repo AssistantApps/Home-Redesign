@@ -9,7 +9,7 @@
     "data:live": "node webpack/node/generateLiveJson.js",
     "data:project": "node webpack/node/generateProjectJson.js",
     "javascript": "npm-run-all --sequential javascript:*",
-    "javascript:main": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --progress --profile --mode production",
+    "javascript:main": "webpack --progress --profile --mode production",
     "javascript:metapages": "node ./webpack/node/generateAppPages.js",
     "sass": "npm-run-all --sequential sass:*",
     "sass:main": "sass webpack/scss/main.scss assets/css/main.css",
