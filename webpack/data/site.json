@@ -356,14 +356,17 @@
             "value": "cross-site-cookie=name; SameSite=None; Secure"
         },
         {
+            "hideInHtml": true,
             "name": "X-Clacks-Overhead",
             "value": "GNU Terry Pratchett, Eddison the Magic Doggo"
         },
         {
+            "hideInHtml": true,
             "name": "Clacks-Overhead",
             "value": "GNU Terry Pratchett, Eddison the Magic Doggo"
         },
         {
+            "hideInHtml": true,
             "name": "X-Powered-by",
             "value": "Magic & the Distraction Squad"
         }
