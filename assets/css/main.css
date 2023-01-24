@@ -2205,6 +2205,7 @@ body::-webkit-scrollbar-thumb {
 html {
   background-color: #060b0f;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .bg {
@@ -3660,7 +3661,7 @@ body.app-specific #page-wrapper #banner .store .sublinks .store-icon {
   gap: 0.5em;
   border-radius: 8px;
   padding: 0.45em 0.75em;
-  border: 1px solid #bdbdbd;
+  border: 2px solid #bdbdbd;
   transition: all 150ms ease-in-out;
 }
 body.app-specific #page-wrapper #banner .store .sublinks .store-icon img {
@@ -3683,54 +3684,85 @@ body.app-specific #page-wrapper #banner .store .sublinks .store-icon .content p 
   transition: none;
 }
 
-body #page-wrapper #banner .banner-screenshot-stack .scroll-down-arrows {
+body #page-wrapper #banner .banner-screenshot-stack .scroll-down-arrows,
+body.app-specific #page-wrapper #banner .banner-screenshot-stack .scroll-down-arrows {
   display: none;
 }
 @media screen and (max-width: 1680px) {
-  body #page-wrapper #banner .inner .banner-screenshot-stack .apps-screenshot:nth-child(2) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .apps-screenshot:nth-child(2),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .apps-screenshot:nth-child(2) {
     top: 0;
   }
 }
 @media screen and (max-width: 1280px) {
-  body #page-wrapper #banner {
+  body #page-wrapper #banner,
+  body.app-specific #page-wrapper #banner {
     padding-top: 4em;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack {
+  body #page-wrapper #banner .inner .banner-screenshot-stack,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack {
     padding-left: 5em;
   }
 }
 @media screen and (max-width: 980px) {
-  body #header {
+  body #header,
+  body.app-specific #header {
     margin: 0 2em;
     width: unset;
   }
-  body #page-wrapper > #banner {
+  body #header .header-center,
+  body.app-specific #header .header-center {
+    overflow: hidden;
+  }
+  body #header .header-center a:first-child,
+  body.app-specific #header .header-center a:first-child {
+    display: none;
+  }
+  body #header .header-download,
+  body.app-specific #header .header-download {
+    display: none;
+  }
+  body #page-wrapper > #banner,
+  body.app-specific #page-wrapper > #banner {
     margin-bottom: 0;
     padding-bottom: 4em;
   }
-  body #page-wrapper > #banner .star-parallax {
+  body #page-wrapper > #banner .star-parallax,
+  body.app-specific #page-wrapper > #banner .star-parallax {
     display: none;
   }
-  body #page-wrapper #banner .inner > .row {
+  body #page-wrapper #banner .inner > .row,
+  body.app-specific #page-wrapper #banner .inner > .row {
     min-height: unset;
   }
-  body #page-wrapper #banner .inner .banner-text {
+  body #page-wrapper #banner .inner > .row .banner-screenshot-stack,
+  body.app-specific #page-wrapper #banner .inner > .row .banner-screenshot-stack {
+    padding-left: unset;
+  }
+  body #page-wrapper #banner .inner .banner-text,
+  body.app-specific #page-wrapper #banner .inner .banner-text {
     text-align: center;
   }
-  body #page-wrapper #banner .inner .banner-text .font-weight-light br {
+  body #page-wrapper #banner .inner .banner-text .font-weight-light br,
+  body.app-specific #page-wrapper #banner .inner .banner-text .font-weight-light br {
     display: none;
   }
-  body #page-wrapper #banner .inner .banner-text .scroll-down-arrows {
+  body #page-wrapper #banner .inner .banner-text .scroll-down-arrows,
+  body.app-specific #page-wrapper #banner .inner .banner-text .scroll-down-arrows {
     display: none;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack {
+  body #page-wrapper #banner .inner .banner-screenshot-stack,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack {
     padding: 0;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack {
     text-align: center;
   }
   body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1),
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
     display: inline-block;
     position: relative;
     top: unset;
@@ -3741,95 +3773,132 @@ body #page-wrapper #banner .banner-screenshot-stack .scroll-down-arrows {
     height: 60vh;
     overflow: hidden;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1) {
     transform: rotate(-10deg);
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
     transform: rotate(10deg);
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .scroll-down-arrows {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .scroll-down-arrows,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .scroll-down-arrows {
     display: unset;
     bottom: -20px;
   }
+  body #page-wrapper #banner .inner .store .store-list,
+  body.app-specific #page-wrapper #banner .inner .store .store-list {
+    flex-wrap: wrap;
+  }
+  body #page-wrapper #banner .inner .store .store-list,
+  body #page-wrapper #banner .inner .store .sublinks,
+  body.app-specific #page-wrapper #banner .inner .store .store-list,
+  body.app-specific #page-wrapper #banner .inner .store .sublinks {
+    justify-content: center;
+  }
   body #wrapper,
-  body #wrapper-work {
+  body #wrapper-work,
+  body.app-specific #wrapper,
+  body.app-specific #wrapper-work {
     margin: 0 2em;
     width: unset;
   }
   body #wrapper .features,
-  body #wrapper-work .features {
+  body #wrapper-work .features,
+  body.app-specific #wrapper .features,
+  body.app-specific #wrapper-work .features {
     grid-template-columns: 1fr;
   }
-  body #footer {
+  body #footer,
+  body.app-specific #footer {
     margin: 0 2em 5em 2em;
     width: unset;
   }
-  body #footer ul.actions li input {
+  body #footer ul.actions li input,
+  body.app-specific #footer ul.actions li input {
     font-size: 1rem;
     margin-top: 10px;
   }
 }
 @media screen and (max-width: 736px) {
-  body #page-wrapper #banner {
+  body #page-wrapper #banner,
+  body.app-specific #page-wrapper #banner {
     padding-top: 2em;
   }
-  body #page-wrapper #banner .inner .banner-text h2.font-weight-light {
+  body #page-wrapper #banner .inner .banner-text h2.font-weight-light,
+  body.app-specific #page-wrapper #banner .inner .banner-text h2.font-weight-light {
     font-size: 2.2em;
   }
-  body #page-wrapper #banner .inner .banner-text h2.font-weight-light br {
+  body #page-wrapper #banner .inner .banner-text h2.font-weight-light br,
+  body.app-specific #page-wrapper #banner .inner .banner-text h2.font-weight-light br {
     display: none;
   }
-  body #page-wrapper #banner .inner .banner-text p {
+  body #page-wrapper #banner .inner .banner-text p,
+  body.app-specific #page-wrapper #banner .inner .banner-text p {
     font-size: 1.2em;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack {
+  body #page-wrapper #banner .inner .banner-screenshot-stack,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack {
     padding: 0;
     text-align: center;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack {
     display: inline-block;
-    height: 50vh;
+    max-height: 40vh;
     margin-bottom: 4em;
     border-radius: 2em;
     overflow: hidden;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .screenshot-inner:before {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .screenshot-inner:before,
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .screenshot-inner:before {
     display: none;
   }
   body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1),
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
     height: 60vh;
     padding-top: 0;
     filter: unset;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(1) {
     transform: unset;
   }
-  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
+  body #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2),
+  body.app-specific #page-wrapper #banner .inner .banner-screenshot-stack .screenshot-stack .apps-screenshot:nth-child(2) {
     display: none;
   }
   body #wrapper > h2,
   body #wrapper-work .inner > h2,
-  body #footer .inner > h2 {
+  body #footer .inner > h2,
+  body.app-specific #wrapper > h2,
+  body.app-specific #wrapper-work .inner > h2,
+  body.app-specific #footer .inner > h2 {
     font-size: 2rem;
     text-align: center;
   }
-  body #footer-bottom {
+  body #footer-bottom,
+  body.app-specific #footer-bottom {
     flex-direction: column;
   }
-  body #footer-bottom .important {
+  body #footer-bottom .important,
+  body.app-specific #footer-bottom .important {
     justify-content: center;
     margin: 0 1em 1em 1em;
     font-size: 1.25em;
     flex-wrap: wrap;
   }
-  body #footer-bottom .icons {
+  body #footer-bottom .icons,
+  body.app-specific #footer-bottom .icons {
     justify-content: center;
     font-size: 2em;
   }
 }
 @media screen and (max-width: 480px) {
-  body #page-wrapper > #banner {
+  body #page-wrapper > #banner,
+  body.app-specific #page-wrapper > #banner {
     padding-bottom: 6em;
   }
 }
