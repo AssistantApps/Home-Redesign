@@ -1,4 +1,5 @@
-body {
+body,
+body.app-specific {
     #page-wrapper #banner .banner-screenshot-stack .scroll-down-arrows {
         display: none;
     }
@@ -31,9 +32,21 @@ body {
         #header {
             margin: 0 2em;
             width: unset;
+
+            .header-center {
+                overflow: hidden;
+
+                a:first-child {
+                    display: none;
+                }
+            }
+
+            .header-download {
+                display: none;
+            }
         }
 
-        #page-wrapper>#banner {
+        #page-wrapper > #banner {
             margin-bottom: 0;
             padding-bottom: 4em;
 
@@ -44,8 +57,12 @@ body {
 
         #page-wrapper #banner {
             .inner {
-                >.row {
+                > .row {
                     min-height: unset;
+
+                    .banner-screenshot-stack {
+                        padding-left: unset;
+                    }
                 }
 
                 .banner-text {
@@ -91,6 +108,17 @@ body {
                     .scroll-down-arrows {
                         display: unset;
                         bottom: -20px;
+                    }
+                }
+
+                .store {
+                    .store-list {
+                        flex-wrap: wrap;
+                    }
+
+                    .store-list,
+                    .sublinks {
+                        justify-content: center;
                     }
                 }
             }
@@ -142,7 +170,7 @@ body {
 
                     .screenshot-stack {
                         display: inline-block;
-                        height: 50vh;
+                        max-height: 40vh;
                         margin-bottom: 4em;
                         border-radius: 2em;
                         overflow: hidden;
@@ -173,7 +201,7 @@ body {
         #wrapper,
         #wrapper-work .inner,
         #footer .inner {
-            >h2 {
+            > h2 {
                 font-size: 2rem;
                 text-align: center;
             }
@@ -197,7 +225,7 @@ body {
     }
 
     @include breakpoint("<=xsmall") {
-        #page-wrapper>#banner {
+        #page-wrapper > #banner {
             padding-bottom: 6em;
         }
     }
