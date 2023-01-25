@@ -104,7 +104,7 @@ textarea {
     }
 
     &:focus {
-        border-color: desaturate(lighten(_palette(accent), 6), 3);
+        border-color: var(--primary-text-colour);
     }
 }
 

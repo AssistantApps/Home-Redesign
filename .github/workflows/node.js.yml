@@ -3,9 +3,13 @@
 
 name: Build and Deploy
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: ['redesign']
+  workflow_dispatch:
 
 jobs:
   build:

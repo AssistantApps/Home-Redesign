@@ -1,4 +1,5 @@
-body {
+body,
+body.app-specific {
     #page-wrapper #banner .banner-screenshot-stack .scroll-down-arrows {
         display: none;
     }
@@ -22,10 +23,6 @@ body {
             .inner {
                 .banner-screenshot-stack {
                     padding-left: 5em;
-
-                    .apps-screenshot:nth-child(2) {
-                        top: -5%;
-                    }
                 }
             }
         }
@@ -35,6 +32,18 @@ body {
         #header {
             margin: 0 2em;
             width: unset;
+
+            .header-center {
+                overflow: hidden;
+
+                a:first-child {
+                    display: none;
+                }
+            }
+
+            .header-download {
+                display: none;
+            }
         }
 
         #page-wrapper > #banner {
@@ -50,6 +59,10 @@ body {
             .inner {
                 > .row {
                     min-height: unset;
+
+                    .banner-screenshot-stack {
+                        padding-left: unset;
+                    }
                 }
 
                 .banner-text {
@@ -95,6 +108,17 @@ body {
                     .scroll-down-arrows {
                         display: unset;
                         bottom: -20px;
+                    }
+                }
+
+                .store {
+                    .store-list {
+                        flex-wrap: wrap;
+                    }
+
+                    .store-list,
+                    .sublinks {
+                        justify-content: center;
                     }
                 }
             }
@@ -146,15 +170,20 @@ body {
 
                     .screenshot-stack {
                         display: inline-block;
-                        height: 50vh;
+                        max-height: 40vh;
                         margin-bottom: 4em;
                         border-radius: 2em;
                         overflow: hidden;
+
+                        .screenshot-inner:before {
+                            display: none;
+                        }
 
                         .apps-screenshot:nth-child(1),
                         .apps-screenshot:nth-child(2) {
                             height: 60vh;
                             padding-top: 0;
+                            filter: unset;
                         }
 
                         .apps-screenshot:nth-child(1) {
