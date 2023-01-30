@@ -29,7 +29,6 @@ async function generateOtherFiles() {
 
 
     Handlebars.registerPartial('components/documentHead', require('../handlebar/components/documentHead.hbs'));
-    Handlebars.registerPartial('components/background', require('../handlebar/components/background.hbs'));
     Handlebars.registerPartial('components/banner', require('../handlebar/components/banner.hbs'));
     Handlebars.registerPartial('components/footer', require('../handlebar/components/footer.hbs'));
     Handlebars.registerPartial('components/scripts', require('../handlebar/components/scripts.hbs'));
@@ -71,6 +70,9 @@ async function generateOtherFiles() {
             downloadAppLink: (assApp.downloadAppLink ?? assApp.links?.[0]?.url) ?? assApp.link,
             storeBadges: storeBadges,
             otherLinks: otherLinks,
+            backgroundImg: (assApp.customPrimaryColour != null)
+                ? `url(/assets/img/bubble-${assApp.shortCode}.svg)`
+                : `url(/assets/img/bubble.svg)`,
 
             ...assApp,
 
@@ -83,6 +85,13 @@ async function generateOtherFiles() {
             fs.mkdirSync(assApp.shortCode);
         }
         fs.writeFile(`./${assApp.shortCode}/index.html`, compiledTemplate, ['utf8'], () => { });
+
+        if (assApp.customPrimaryColour != null) {
+            const backgroundTemplate = await readFile(`./webpack/handlebar/bubble.svg.hbs`, 'utf8');
+            const backgroundTemplateFunc = Handlebars.compile(backgroundTemplate);
+            const backgroundCompiledTemplate = backgroundTemplateFunc(templateData);
+            fs.writeFile(`./assets/img/bubble-${assApp.shortCode}.svg`, backgroundCompiledTemplate, ['utf8'], () => { });
+        }
     }
 
     for (const redirect of projectData.redirects) {

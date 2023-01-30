@@ -2208,19 +2208,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  color: var(--primary-text-colour);
-  z-index: -1000;
-  filter: blur(4em);
-  opacity: 0.1;
-}
-
 #page-wrapper > #banner,
 #page-wrapper > #wrapper > .features,
 #page-wrapper > #wrapper-work,
@@ -2257,6 +2244,42 @@ html {
   user-select: none;
 }
 
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-image: var(--bubble-bg, url(/assets/img/bubble.svg));
+  background-repeat: repeat-y;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: bg-up-and-down;
+  z-index: -1000;
+  filter: blur(4em);
+  opacity: 0.1;
+}
+
+body.app-specific:after {
+  background-size: cover;
+}
+
+@keyframes bg-up-and-down {
+  0% {
+    height: 100%;
+    transform: translateY(0);
+  }
+  50% {
+    height: calc(100% + 25vh);
+    transform: translateY(-25vh);
+  }
+  100% {
+    height: 100%;
+    transform: translateY(0);
+  }
+}
 #page-wrapper #banner {
   padding: 6em 0 1.75em 0;
 }

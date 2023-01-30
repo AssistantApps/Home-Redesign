@@ -17,16 +17,14 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background-color: var(--primary-text-colour);
-    background-image: -webkit-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.5) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0, 0, 0, 0.5) 75%,
-        transparent 75%,
-        transparent
-    );
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.5) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.5) 75%,
+            transparent 75%,
+            transparent);
 }
 
 ::selection {
@@ -39,23 +37,10 @@ html {
     scroll-behavior: smooth;
 }
 
-.bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    color: var(--primary-text-colour);
-    z-index: -1000;
-    filter: blur(4em);
-    opacity: 0.1;
-}
-
-#page-wrapper > #banner,
-#page-wrapper > #wrapper > .features,
-#page-wrapper > #wrapper-work,
-#page-wrapper > #contactus {
+#page-wrapper>#banner,
+#page-wrapper>#wrapper>.features,
+#page-wrapper>#wrapper-work,
+#page-wrapper>#contactus {
     margin-bottom: 7em;
 }
 
