@@ -1,5 +1,7 @@
 :root {
     --primary-text-colour: #{_palette(primary)};
+
+    --assistantapps-font-family: "Raleway", sans-serif;
 }
 
 body::-webkit-scrollbar-track {
