@@ -94,6 +94,20 @@ async function generateOtherFiles() {
         }
     }
 
+    const otherPageTemplateData = {
+        ...projectData,
+        htmlHeaders: [],
+    };
+    const otherTemplates = [
+        'support.hbs',
+    ];
+    for (const otherTemplate of otherTemplates) {
+        const otherTemplateContent = await readFile(`./webpack/handlebar/${otherTemplate}`, 'utf8');
+        const otherTemplateFunc = Handlebars.compile(otherTemplateContent);
+        const otherTemplateCompiled = otherTemplateFunc(otherPageTemplateData);
+        fs.writeFile(`./${otherTemplate.replace('.hbs', '.html')}`, otherTemplateCompiled, ['utf8'], () => { });
+    }
+
     for (const redirect of projectData.redirects) {
         const template = await readFile(`./webpack/handlebar/redirect.hbs`, 'utf8');
         const templateFunc = Handlebars.compile(template);

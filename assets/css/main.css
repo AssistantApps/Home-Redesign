@@ -2178,6 +2178,7 @@ button:disabled,
 
 :root {
   --primary-text-colour: #2cb673;
+  --assistantapps-font-family: "Raleway", sans-serif;
 }
 
 body::-webkit-scrollbar-track {
